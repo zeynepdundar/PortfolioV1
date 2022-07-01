@@ -1,0 +1,153 @@
+/* variables declawarmorange here - these are the colors for our pages, as well as the font stacks and sizes. */
+:root {
+  --black: #042940;
+  --plum: #4b0d49;
+  --dkblue: #0d314b;
+  --warmorange: #f29325;
+  --orange: #d96941;
+  --green: #9fc131;
+  --whey: #d6d58e;
+  --white: #f7f8fa;
+  --font-size: 1.3rem;
+  --mono: "Rubik", sans-serif;
+  --sans: "Arima", cursive;
+}
+/* border box model: https://css-tricks.com/box-sizing/ */
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+/* generic styles for the page */
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--sans);
+  background-color: var(--black);
+  color: var(--white);
+  font-size: var(--font-size);
+}
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+/* navbar styles*/
+nav {
+  font-family: var(--mono);
+  font-size: 80%;
+  padding: 1rem;
+}
+
+nav h1 a {
+  font-family: var(--sans);
+}
+
+nav [class*="fa-"] {
+  font-size: 150%;
+  color: var(--green);
+}
+
+nav h1 [class*="fa-"] {
+  font-size: 100%;
+  color: var(--green);
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+nav li:first-child {
+  flex-basis: 100%;
+  text-align: center;
+}
+nav a {
+  color: var(--whey);
+  text-decoration: none;
+  display: block;
+}
+
+nav a:hover,
+nav [class*="fa-"]:hover {
+  color: var(--warmorange);
+}
+
+/* intro styles */
+#intro {
+  padding-bottom: 10rem;
+}
+
+#intro p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+#intro .name {
+  font-family: var(--mono);
+  font-size: 1rem;
+}
+
+.name span {
+  font-family: var(--sans);
+  font-size: 4rem;
+  color: var(--green);
+  display: block;
+  font-weight: 300;
+}
+
+#intro h2 {
+  font-size: 4rem;
+}
+
+#intro a {
+  color: var(--orange);
+}
+#intro a:hover {
+  color: var(--warmorange);
+}
+
+/* contact styles */
+#contact {
+  background-color: var(--plum);
+  text-align: center;
+  margin: 0 auto;
+}
+
+#contact p:last-child {
+  margin-bottom: 3rem;
+}
+
+.button {
+  background-color: var(--orange);
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.button:hover {
+  color: var(--whey);
+  background-color: var(--warmorange);
+}
+
+@media (min-width: 850px) {
+  nav {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  nav li:first-child {
+    flex-basis: auto;
+    text-align: left;
+    margin-right: auto;
+  }
+}
