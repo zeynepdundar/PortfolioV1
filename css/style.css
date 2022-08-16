@@ -133,8 +133,9 @@ nav [class*="fa-"]:hover {
 }
 
 #intro a {
-  color: var(--orange);
+  color: white;
 }
+
 #intro a:hover {
   color: var(--warmorange);
 }
@@ -152,6 +153,14 @@ nav [class*="fa-"]:hover {
 }
 
 /* projects styles */
+
+#projects a {
+  color: white;
+}
+#projects a:hover {
+  color: #f9cdff;
+}
+
 #projects,
 #about {
   padding: 4rem 1rem;
@@ -165,22 +174,26 @@ nav [class*="fa-"]:hover {
 
 #projects h3,
 #about h3 {
-  color: var(--black);
+  color: #f9cdff;
 }
 
-#projects h3,
+#projects h4,
 #about h4 {
   font-size: 1rem;
   margin: 0;
 }
 
 .blackbox {
-  background-color: var(--black);
+  background-color: #0d314b;
   padding: 1rem;
   border-radius: 10px;
   color: var(--white);
   font-size: 1rem;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   line-height: 1.5;
+}
+#about .blackbox {
+  background-color: #440f3b;
 }
 
 #projects ul,
@@ -193,11 +206,12 @@ nav [class*="fa-"]:hover {
   justify-content: flex-start;
   gap: 1rem;
   font-size: 1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #projects img,
 #about img {
-  /* margin: 2rem 0 4rem 0; */
+  margin: 2rem 0 4rem 0;
   /* width: 700px; */
   height: auto; /*to preserve the aspect ratio of the image*/
   border-left: 1px solid var(--green);
@@ -293,8 +307,13 @@ footer {
 }
 
 svg {
-  color: #56219b;
+  color: var(--green);
 }
+
+svg:hover {
+  color: var(--warmorange);
+}
+
 footer ul {
   list-style-type: none;
   padding: 0;
@@ -309,7 +328,7 @@ footer ul {
 /*background divs color*/
 
 .section-plum {
-  background-color: var(--plum);
+  background-color: #440f3b;
 }
 
 .section-blue {
