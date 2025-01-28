@@ -2,11 +2,11 @@
 :root {
   --black: #0f0a32;
   --plum: #400243;
-  --green: #9ab73a;
-  --cherry: #e74e1c;
+  --green: #A1FFFF;
+  --cherry: #1a1e33;
   --gold: #ffd43b;
-  --orange: #161515;
-  --blue: #3795bd;
+  --orange: #0b5240;
+  --blue: #fd57f7;
   --white: #fff4e6;
   --font-size: 1.3rem;
   --mono: "Rubik", sans-serif;
@@ -29,7 +29,8 @@ body {
   padding: 0;
   margin: 0;
   font-family: var(--sans);
-  background-color: var(--black);
+  background: var(--black) url('../img/stars-image.jpg') no-repeat center center fixed; /* Added background image */
+  background-size: cover; 
   color: var(--white);
   font-size: var(--font-size);
 }
@@ -103,8 +104,8 @@ nav .button {
 }
 
 nav .button:hover {
-  background-color: #869b42;
-  color: var(--black);
+  background-color: transparent;
+  color: var(--white);
 }
 
 /* footer styles */
@@ -196,17 +197,21 @@ footer [class*="fa-"]:hover {
 }
 
 #contact a {
-  color: var(--white);
-  background-color: var(--black);
-  padding: 0.5rem;
-  border-radius: 5px;
-  font-family: var(--mono);
+
   text-decoration: none;
+  color: var(--color-white) !important;
+  box-shadow: inset 0 0 2.5rem var(--blue) !important;
+  border-radius: 2.5em;
+  text-align: center;
+  color: #a1ffff;
+ padding: 0.7rem 1rem 0.55rem;
+
 }
 
 #contact a:hover {
   color: var(--white);
   background-color: var(--blue);
+  transition: all 0.5s
 }
 
 #contact p:last-child {
@@ -269,7 +274,7 @@ footer [class*="fa-"]:hover {
 }
 
 #about .blackbox {
-  background-color: var(--cherry);
+  background-color: #212833;
   color: var(--white);
 }
 
@@ -289,8 +294,8 @@ footer [class*="fa-"]:hover {
 }
 
 #projects img {
-  border-left: 1px solid var(--gold);
-  border-top: 1px solid var(--gold);
+  border-left: 1px solid var(--white);
+  border-top: 1px solid var(--white);
 }
 
 #projects img,
@@ -304,8 +309,8 @@ footer [class*="fa-"]:hover {
 }
 
 #about .myskills-icons img {
-  border-left: 1px solid var(--cherry);
-  border-top: 1px solid var(--cherry);
+  border-left: 1px solid var(--white);
+  border-top: 1px solid var(--white);
   width: 6rem;
   margin: 0.5rem;
 }
@@ -321,13 +326,14 @@ footer [class*="fa-"]:hover {
 }
 
 #projects .tech-stack>.item {
-  background-color: var(--gold);
-  color: var(--plum);
+
   padding: 0.25em 0.75em;
   border-radius: 2.5em;
+  text-align: center;
+  color: #a1ffff;
   font-size: 0.75rem;
   font-weight: 400;
-  white-space: nowrap;
+  box-shadow: inset 0 0 2.5rem #54c0e8;
   /* Prevent text from wrapping to the next line */
   overflow: hidden;
   /* Hide overflow if text is too long */
@@ -433,19 +439,17 @@ footer [class*="fa-"]:hover {
 
 /*background divs color*/
 
-.section-plum {
-  background-color: var(--plum);
+.section-navy {
+
+  background-color:   #070F1C;
+
 }
 
 .section-orange {
-  background-color: var(--orange);
+  background-color: #212833;
 }
 
 .gradient {
   height: 2.5px;
-  background: linear-gradient(61deg,
-      rgba(242, 147, 37, 1) 0%,
-      rgba(159, 193, 49, 1) 0%,
-      rgb(55, 149, 189) 25%,
-      rgba(159, 193, 49, 1) 40%);
+  background: linear-gradient(90deg, #fd57f7 2%, #54c0e8 16%, #a1ffff 32%, #fd57f7  49%, #54c0e8 66%, #a1ffff 82%, #fd57f7 98%);
 }
