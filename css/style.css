@@ -149,7 +149,7 @@ footer [class*="fa-"]:hover {
   margin: 0 auto;
 }
 
-#intro p {
+#intro p, #about{
   font-size: 1rem;
   line-height: 1.5;
 }
@@ -271,14 +271,9 @@ footer [class*="fa-"]:hover {
   line-height: 1.5;
 }
 
-#about .navybox {
-  background-color: #212833;
-  color: var(--white);
-}
 
 #projects ul,
-.tech-stack,
-#about ul {
+.tech-stack{
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -299,11 +294,12 @@ footer [class*="fa-"]:hover {
 #projects img,
 #about img {
   margin: 2rem 0 4rem 0;
-  /* width: 700px; */
   height: auto;
-  /*to preserve the aspect ratio of the image*/
   border-radius: 25px;
   padding: 1rem;
+}
+#about .color-pink {
+color: var(--pink);
 }
 
 #about .myskills-icons img {
@@ -314,17 +310,14 @@ footer [class*="fa-"]:hover {
 }
 
 .myskills-icons {
+  padding: 2rem 4rem;
   display: grid;
-  /* Changed from flexbox to grid */
   grid-template-columns: repeat(auto-fill,
-      minmax(6rem, 1fr));
-  /* Define grid template */
+      minmax(8rem, 1fr));
   gap: 1rem;
-  /* Add gap between items */
 }
 
 #projects .tech-stack>.item {
-
   padding: 0.25em 0.75em;
   border-radius: 2.5em;
   text-align: center;
@@ -332,9 +325,7 @@ footer [class*="fa-"]:hover {
   font-size: 0.75rem;
   font-weight: 400;
   box-shadow: inset 0 0 2.5rem #54c0e8;
-  /* Prevent text from wrapping to the next line */
   overflow: hidden;
-  /* Hide overflow if text is too long */
   text-overflow: ellipsis;/
 }
 
@@ -345,8 +336,7 @@ footer [class*="fa-"]:hover {
     gap: 1rem;
   }
 
-  #projects img,
-  #about img {
+  #projects img{
     grid-column: 1/6;
     grid-row: 1/2;
   }
@@ -359,8 +349,7 @@ footer [class*="fa-"]:hover {
     text-align: right;
   }
 
-  #projects ul,
-  #about ul {
+  #projects ul{
     justify-content: flex-end;
   }
 }
@@ -377,8 +366,7 @@ footer [class*="fa-"]:hover {
     margin: 0 auto;
   }
 
-  #projects img,
-  #about img {
+  #projects img {
     grid-column: 1/6;
     grid-row: 1/2;
   }
@@ -390,26 +378,22 @@ footer [class*="fa-"]:hover {
     text-align: right;
   }
 
-  #projects ul,
-  #about ul {
+  #projects ul{
     justify-content: flex-end;
   }
 
-  #projects .reverse .text,
-  #about .reverse .text {
+  #projects .reverse .text{
     grid-column: 1/7;
     order: 2;
     text-align: left;
   }
 
-  #projects .reverse img,
-  #about .reverse img {
+  #projects .reverse img{
     grid-column: 6/11;
     grid-row: 1/2;
   }
 
-  #projects .reverse ul,
-  #about .reverse ul {
+  #projects .reverse ul{
     justify-content: flex-start;
   }
 
