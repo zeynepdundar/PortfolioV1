@@ -1,12 +1,10 @@
 /* variables declawarmorange here - these are the colors for our pages, as well as the font stacks and sizes. */
 :root {
-  --black: #0f0a32;
+  --black: #070F1C;
+  --navy: #0f0a32;
   --plum: #400243;
   --green: #A1FFFF;
-  --cherry: #1a1e33;
-  --gold: #ffd43b;
-  --orange: #0b5240;
-  --blue: #fd57f7;
+  --pink: #fd57f7;
   --white: #fff4e6;
   --font-size: 1.3rem;
   --mono: "Rubik", sans-serif;
@@ -96,7 +94,7 @@ nav [class*="fa-"]:hover {
 
 nav .button {
   background-color: var(--green);
-  color: var(--black);
+  color: var(--navy);
   padding: 0.5rem;
   border-radius: 5px;
   font-family: var(--mono);
@@ -200,7 +198,7 @@ footer [class*="fa-"]:hover {
 
   text-decoration: none;
   color: var(--color-white) !important;
-  box-shadow: inset 0 0 2.5rem var(--blue) !important;
+  box-shadow: inset 0 0 2.5rem var(--pink) !important;
   border-radius: 2.5em;
   text-align: center;
   color: #a1ffff;
@@ -210,7 +208,7 @@ footer [class*="fa-"]:hover {
 
 #contact a:hover {
   color: var(--white);
-  background-color: var(--blue);
+  background-color: var(--pink);
   transition: all 0.5s
 }
 
@@ -225,7 +223,7 @@ footer [class*="fa-"]:hover {
 }
 
 #projects a:hover {
-  color: var(--blue);
+  color: var(--pink);
 }
 
 #projects .highlight {
@@ -245,7 +243,7 @@ footer [class*="fa-"]:hover {
 
 #projects h3,
 #about h3 {
-  color: var(--blue);
+  color: var(--pink);
 }
 
 #projects h4,
@@ -260,11 +258,11 @@ footer [class*="fa-"]:hover {
 }
 
 #projects svg:hover {
-  color: var(--blue);
+  color: var(--pink);
 }
 
 .blackbox {
-  background-color: var(--black);
+  background-color: var(--navy);
   padding: 1rem;
   border-radius: 10px;
   color: var(--white);
@@ -273,7 +271,7 @@ footer [class*="fa-"]:hover {
   line-height: 1.5;
 }
 
-#about .blackbox {
+#about .navybox {
   background-color: #212833;
   color: var(--white);
 }
@@ -439,15 +437,10 @@ footer [class*="fa-"]:hover {
 
 /*background divs color*/
 
-.section-navy {
-
-  background-color:   #070F1C;
-
+.section-black {
+  background-color: var(--black);
 }
 
-.section-orange {
-  background-color: #212833;
-}
 
 .gradient {
   height: 2.5px;
