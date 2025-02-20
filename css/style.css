@@ -1,12 +1,13 @@
 /* Variables Declaration - Colors, Font Stacks, and Sizes */
 :root {
   --black: #070f1c;
-  --grey: #898989;
-  --blue: #54c0e8;
+  --dark: #050505;
+  --grey: #B5B5B5;
+  --blue: #59C2E8;
   --cyan: #a1ffff;
   --dark-grey-blue: #212833;
-  --purple: #a199ff;
-  --white: #fff4e6;
+  --purple: #B4ADFF;
+  --white: #D3D3D3;
   --font-size: 1.3rem;
   --sans: "Quicksand", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   --mono: "Courgette", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -151,7 +152,9 @@ nav svg:hover {
 
 .button {
   background-color: var(--purple);
+  color: var(--dark);
   text-align: center;
+  font-weight: 600;
   padding: 0.5rem;
   border-radius: 10px;
   transition: background 0.3s ease, transform 0.2s ease;
@@ -160,7 +163,8 @@ nav svg:hover {
 
 .button:hover {
   background-color: #8b84d8;
-  color: var(--white);
+  color: var(--dark);
+
 }
 
 /* Navigation Tweaks */
@@ -258,13 +262,14 @@ footer [class*="fa-"]:hover {
 
 #contact a {
   text-decoration: none;
-  color: var(--white) !important;
+  color: var(--dark);
+
   padding: 0.7rem 1rem 0.55rem;
   transition: all 0.5s;
 }
 
 #contact a:hover {
-  color: var(--white);
+  color: var(--dark);
   background-color: #8b84d8;
 }
 
@@ -420,6 +425,7 @@ footer [class*="fa-"]:hover {
 #about h3 span:hover {
   background-size: 100% 100%;
   background-color: var(--purple);
+  color: white;
   text-decoration: none;
 }
 
@@ -549,7 +555,7 @@ footer [class*="fa-"]:hover {
 }
 
 .item-description {
-  color: hsl(0deg 0% 53.7% / 1);
+  color: var(--grey);
   margin: 0px;
   margin-top: 0.5rem;
 }
