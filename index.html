@@ -1,339 +1,555 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Zeynep</title>
 
-    <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zeynep</title>
 
-    <link rel="manifest" href="/site.webmanifest" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Arima:wght@400;700&family=Rubik&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      defer
-      src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
-      integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <nav>
-      <ul>
-        <li>
-          <h1>
-            <a href="index.html"
-              ><span class="fas fa-star-half-alt" aria-hidden="true"></span
-              >Zeynep Dundar</a
-            >
-          </h1>
-        </li>
-        <li><a href="index.html#about">About</a></li>
-        <li><a href="index.html#projects">Projects</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
-        <li>
-          <a href="https://www.linkedin.com/in/zeynep-dundar/"
-            ><span class="fab fa-linkedin" aria-hidden="true"></span
-            ><span class="sr-only">LinkedIn</span></a
-          >
-        </li>
-        <li>
-          <a href="https://github.com/zeynepdndr"
-            ><span class="fab fa-github" aria-hidden="true"></span
-            ><span class="sr-only">Github</span></a
-          >
-        </li>
-        <li>
-          <a
-            href="https://www.dropbox.com/scl/fi/1rowx06wlu3ihob1compa/Zeynep-Dundar-Resume.pdf?rlkey=eb55xqxluqilf3l144epq7mxn&st=g5rio417&dl=0"
-            target="_blank"
-            class="button"
-            >Resume</a
-          >
-        </li>
-      </ul>
-    </nav>
-    <section id="intro">
-      <p class="name">Hi, I am <span>Zeynep Dundar,</span></p>
-      <h2>a Frontend Engineer.</h2>
-      <p>
-        I specialize in developing and implementing interactive, user-friendly
-        UIs, solving complex challenges, and building responsive designs. I have
-        a keen interest in creating engaging UX experiences that enhance
-        usability and functionality.
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="icon" href="img/favicon.png" type="image/png">
+
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+  <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+    integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const scrollToTopButton = document.getElementById("scrollToTop");
+
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 300) {
+          scrollToTopButton.style.display = "block";
+        } else {
+          scrollToTopButton.style.display = "none";
+        }
+      });
+
+      scrollToTopButton.addEventListener("click", function (e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    });
+  </script>
+  <nav>
+    <ul>
+      <li>
+        <h1>
+          <a href="index.html">Zeynep Dundar</a>
+          <svg class="svg-path" width="180" height="65" viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
+            <path d="M556 127.295C526.5 106.295 425.5 98.2955 266.665 119.358C146.037 135.353 49 130.295 7 114.295"
+              stroke="#a199ff" stroke-width="8" fill="none" />
+          </svg>
+        </h1>
+      </li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li>
+        <a href="https://www.linkedin.com/in/zeynep-dundar/"><span class="fab fa-linkedin"
+            aria-hidden="true"></span><span class="sr-only">LinkedIn</span></a>
+      </li>
+      <li>
+        <a href="https://github.com/zeynepdndr"><span class="fab fa-github" aria-hidden="true"></span><span
+            class="sr-only">Github</span></a>
+      </li>
+      <li>
+        <a href="https://www.dropbox.com/scl/fi/1rowx06wlu3ihob1compa/Zeynep-Dundar-Resume.pdf?rlkey=eb55xqxluqilf3l144epq7mxn&st=g5rio417&dl=0"
+          target="_blank" class="button">Resume</a>
+      </li>
+    </ul>
+  </nav>
+  <section id="intro">
+    <p class="name">Hi, I'm <span>Zeynep Dundar.</span></p>
+    <h2>A Frontend Engineer.</h2>
+    <p>
+      I specialize in developing and implementing interactive, user-friendly
+      UIs, solving complex challenges, and building responsive designs. I have
+      a keen interest in creating engaging UX experiences that enhance
+      usability and functionality.
+    </p>
+    <p>
+      I earned a degree in Computer Engineering from Istanbul Technical
+      University and worked as a Software Engineer at leading companies,
+      including Renault Group and Accenture.
+    </p>
+    <p>
+      Currently, I work as a Frontend Engineer at Linga rOS. I'm passionate
+      about expanding my hands-on experience and continuously refining my
+      skills in the field.
+      <a href="https://www.linkedin.com/in/zeynep-dundar/" target="_blank">Here is my LinkedIn profile</a>
+    </p>
+  </section>
+  <div class="gradient"></div>
+  <section id="projects">
+    <h2>Projects I am proud of</h2>
+    <article>
+      <div class="text">
+        <h4>Side Project</h4>
+        <h3>
+          Book Trading Platform
+          <a href="https://gitlab.com/harmony-org/book-swap/-/tree/main?ref_type=heads" target="_blank">
+            <span class="fab fa-github" aria-hidden="true"></span>
+          </a>
+        </h3>
+        <ul class="tech-list">
+          <li class="item"><span>AWS services: S3, EC2</span></li>
+          <li class="item"><span>Docker</span></li>
+          <li class="item"><span>Python</span></li>
+          <li class="item"><span>React Native</span></li>
+        </ul>
+        <p class="blackbox">
+          BookSwap is a mobile app for trading used books sustainably. It allows users to scan barcodes, organize
+          their collections, chat in real time, and manage book exchanges effortlessly.
+          <br>
+          Built this in a few months back in 2022, and it has remained a passion project ever since—a featured app
+          that people enjoy while contributing to sustainability and connecting with new people.
+        <div class="link">
+          <a href="https://gitlab.com/harmony-org/book-swap/-/tree/main?ref_type=heads" target="_blank">
+            View Figma Design
+          </a>
+          <span class="fas fa-arrow-right"></span>
+        </div>
+        <!-- More info and demonstration, coming soon! <br />-->
+        </p>
+      </div>
+      <img src="img/book-swap.png" alt="Screenshot of the Book Folks" />
+    </article>
+    <article class="reverse">
+      <div class="text">
+        <h3>
+          Shelfie
+          <a href="https://github.com/zeynepdndr/book-folk" target="_blank">
+            <span class="fab fa-github" aria-hidden="true"></span>
+          </a>
+        </h3>
+        <ul class="tech-list">
+          <li class="item"><span>Firebase</span></li>
+          <li class="item"><span>React</span></li>
+          <li class="item"><span>Google Books Api</span></li>
+          <li class="item"><span>Webpack</span></li>
+        </ul>
+        <p class="blackbox">
+          Shelfie is a SPA for tracking reading progress and building habits. Users can log books, track pages read,
+          view stats, and favorite books for quick access. <br>
+          What started as a way to record books I’d read on sheets turned into this app. Now, I’m adding features like
+          charts to track favorite genres and authors. </p>
+      </div>
+      <img src="img/shelfie.png" alt="Screenshot of the Book Folks" />
+    </article>
+    <article>
+      <div class="text">
+        <h3>
+          Pokédex
+          <a href="https://github.com/zeynepdndr/pokedex" target="_blank">
+            <span class="fab fa-github" aria-hidden="true"></span>
+          </a>
+        </h3>
+        <ul class="tech-list">
+          <li class="item"><span>Typescript</span></li>
+          <li class="item"><span>GraphQL</span></li>
+          <li class="item"><span>Vercel</span></li>
+          <li class="item"><span>NextJS</span></li>
+          <li class="item"><span>CSS</span></li>
+        </ul>
+        <p class="blackbox">
+          A dynamic app for exploring and learning about Pokémon. It lets users browse a list of Pokémon and view
+          detailed information instantly, built using the RESTful Pokémon API. <br> It was a fun project—I’ve always
+          been super curious about Pokémon—and I built it in just a weekend.
+        </p>
+      </div>
+      <img src="img/pokedex.png" alt="Screenshot of the Pokédex" />
+    </article>
+    <article class="reverse">
+      <div class="text">
+        <h3>
+          Sensor Board
+          <a href="https://github.com/zeynepdndr/device-board" target="_blank">
+            <span class="fab fa-github" aria-hidden="true"></span>
+          </a>
+        </h3>
+        <ul class="tech-list">
+          <li class="item"><span>React</span></li>
+          <li class="item"><span>Redux Toolkit</span></li>
+          <li class="item"><span>Typescript</span></li>
+          <li class="item"><span>PrimeReact</span></li>
+          <li class="item"><span>Chart.js</span></li>
+        </ul>
+        <p class="blackbox">
+          A sensor data monitoring web application featuring a dashboard
+          user interface.
+          The application displays graphs that track changes in temperature
+          over time.
+          <br>
+          This project was built to explore the newly launched Redux Toolkit, applying it to manage real-time data
+          efficiently.
+        </p>
+      </div>
+      <img src="img/sensor-board.png" alt="Screenshot of the Sensor Board" />
+    </article>
+    <article>
+      <div class="text">
+        <h3>
+          Portfolio
+          <a href="https://github.com/zeynepdndr/portfolio" target="_blank">
+            <span class="fab fa-github" aria-hidden="true"></span>
+          </a>
+        </h3>
+        <ul class="tech-list">
+          <li class="item"><span>HTML</span></li>
+          <li class="item"><span>CSS</span></li>
+          <li class="item"><span>Vercel</span></li>
+        </ul>
+        <p class="blackbox">
+          The website that you're looking at currently. This website definitely does not represent my front-end
+          skills.<br> P.S. I’ve always been fascinated by space, so I’ve chosen this theme.
+      </div>
+      <img src="img/portfolio.png" alt="Screenshot of the Pokédex" />
+    </article>
+  </section>
+  <div class="gradient"></div>
+  <section id="about">
+    <h2>About Zeynep Dundar</h2>
+    <div class="">
+      <div class="photo-gallery">
+        <img src="./img/me/IMG_5230.jpg" alt="Photo 1" class="photo photo-1">
+        <img src="./img/me/IMG_6482.jpg" alt="Photo 2" class="photo photo-2">
+        <img src="./img/me/IMG_8913.jpg" alt="Photo 3" class="photo photo-3">
+        <img src="./img/me/IMG_9361.jpg" alt="Photo 4" class="photo photo-4">
+        <img src="./img/me/IMG.jpg" alt="Photo 5" class="photo photo-5">
+        <img src="./img/me/9818a861-ff14-49f4-a08b-848155965b61.jpg" alt="Photo 6" class="photo photo-6">
+
+
+      </div>
+      <h4>Just the highlights</h4>
+      <p class="">
+        The early days... <br />
+        I started working as a developer back at 2018 before graduating.
+        <br />
+        <br />
+
+        Before finding my true passion for Frontend Development, I had the
+        chance to develop software across a variety of settings — from
+        consulting firms and large corporations to start-ups and banks.
+        <br />
+        <br />
+        These included e-commerce web applications using Vanilla JS, jQuery,
+        and Firebase, as well as B2B platforms built with
+        <span class="text-purple">React</span>,
+        <span class="text-purple">NextJS</span>, and
+        <span class="text-purple">Angular.</span>
+        <br />
+        <br />
+        I was also fortunate to build a team that allowed me to turn our
+        idea into a mobile app using React Native and leverage
+        <span class="text-purple">AWS</span> (EC2 & S3) for the project.
+        <br />
+        <br />
+        When I'm not coding, you’ll catch me cruising on my motorcycle, hitting the gym, exploring new places, jamming
+        on my guitar, or practicing capoeira!
       </p>
-      <p>
-        I earned a degree in Computer Engineering from Istanbul Technical
-        University and worked as a Software Engineer at leading companies,
-        including Renault Group and Accenture.
-      </p>
-      <p>
-        Currently, I work as a Frontend Engineer at Linga rOS. I'm passionate
-        about expanding my hands-on experience and continuously refining my
-        skills in the field.
-        <a href="https://www.linkedin.com/in/zeynep-dundar/" target="_blank"
-          >Here is my LinkedIn profile</a
-        >
-      </p>
-    </section>
-    <div class="gradient"></div>
+      <br />
+      <br />
+      <div class="content-wrapper">
+        <!-- Experience Section -->
+        <div class="experience">
+          <h4>Where I’ve Worked</h4>
+          <div class="timeline">
+            <div class="timeline-container">
+              <div class="timeline-item">
+                <div class="date-column">
+                  <div class="date-range">Feb 2023 – Now</div>
+                </div>
+                <div class="content-column">
+                  <div class="content-item">
+                    <a href="https://www.lingaros.com/" target="_blank" rel="noopener noreferrer">
+                      <div class="title-container">
+                        <h3 class="item-title">Frontend Engineer, Linga rOS</h3>
+                        <span class="fas fa-external-link-alt"></span>
+                      </div>
+                    </a>
+                    <p class="item-description">Revamped the back-office UI of a restaurant operating system.</p>
+                    <ul class="tech-list">
+                      <li class="item"><span>TypeScript</span></li>
+                      <li class="item"><span>GraphQL</span></li>
+                      <li class="item"><span>Vercel</span></li>
+                      <li class="item"><span>NextJS</span></li>
+                      <li class="item"><span>CSS</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
 
-    <div class="section-plum">
-      <section id="projects">
-        <h2>Projects I am proud of</h2>
-        <article>
-          <div class="text">
-            <h4>Side Project</h4>
-            <h3>
-              Book Trading Platform
-              <a
-                href="https://gitlab.com/harmony-org/book-swap/-/tree/main?ref_type=heads"
-                target="_blank"
-              >
-                <span class="fab fa-github" aria-hidden="true"></span>
-              </a>
-            </h3>
-            <div class="tech-stack">
-              <div class="item"><span>AWS services: S3, EC2</span></div>
-              <div class="item"><span>Docker</span></div>
-              <div class="item"><span>Python</span></div>
-              <div class="item"><span>React Native</span></div>
-            </div>
-            <p class="blackbox">
-              <span class="highlight"
-                >A mobile app enabling users to trade used books sustainably. </span
-              ><br />
-              Designed and built the front-end for a user-friendly and engaging
-              mobile app.<br />
-              Integrated features like barcode scanning, real-time chat, and
-              book cataloging.<br />
-              Leveraged React Native for cross-platform compatibility and Redux
-              for efficient state management.<br />
-              Achieved a 30% increase in user engagement through intuitive
-              design and smooth user flows.<br />
-              View
-              <a
-                href="https://gitlab.com/harmony-org/book-swap/-/tree/main?ref_type=heads"
-                target="_blank"
-                >Figma Design</a
-              ><br />
-              <!-- More info and demonstration, coming soon! <br />-->
-            </p>
-          </div>
-          <img src="img/bookSwapFigma.jpg" alt="Screenshot of the Book Folks" />
-        </article>
-        <article class="reverse">
-          <div class="text">
-            <h3>
-              Shelfie
-              <a href="https://github.com/zeynepdndr/book-folk" target="_blank">
-                <span class="fab fa-github" aria-hidden="true"></span>
-              </a>
-            </h3>
-            <div class="tech-stack">
-              <div class="item"><span>Firebase</span></div>
-              <div class="item"><span>React</span></div>
-              <div class="item"><span>Google Books Api</span></div>
-              <div class="item"><span>Webpack</span></div>
-            </div>
-            <p class="blackbox">
-              <span class="highlight"
-                >A Single-Page Application (SPA) designed to help users track
-                their reading progress and build healthy reading habits.</span
-              ><br />
-              Allows users to track their reading history by searching for books
-              online or entering them manually, including page numbers.<br />
-              Provides detailed statistics on reading habits, broken down by
-              month.<br />
-              Users can mark books as favorites for easy access.<br />
-              Includes authentication for a personalized user experience.<br />
-              Webpack optimizes and enhances the app’s performance, ensuring
-              faster load times<br />
-            </p>
-          </div>
-          <img
-            src="img/screenshotOfBookFolks.png"
-            alt="Screenshot of the Book Folks"
-          />
-        </article>
-        <article>
-          <div class="text">
-            <h3>
-              Pokédex
-              <a href="https://github.com/zeynepdndr/pokedex" target="_blank">
-                <span class="fab fa-github" aria-hidden="true"></span>
-              </a>
-            </h3>
-            <div class="tech-stack">
-              <div class="item"><span>Typescript</span></div>
-              <div class="item"><span>GraphQL</span></div>
-              <div class="item"><span>Vercel</span></div>
-              <div class="item"><span>NextJS</span></div>
-              <div class="item"><span>CSS</span></div>
-            </div>
-            <p class="blackbox">
-              <span class="highlight">
-                An engaging application designed for users to explore and learn
-                about various Pokemon </span
-              ><br />
-              Users can access the app to view a list of Pokemon.<br />
-              Selecting a Pokemon displays detailed information on the right
-              side.<br />
-              The responsive design ensures a seamless experience on mobile and
-              desktop, adapting to various screen sizes for effortless
-              interaction.<br />
-            </p>
-          </div>
-          <img src="img/pokedex.jpg" alt="Screenshot of the Pokédex" />
-        </article>
-        <article class="reverse">
-          <div class="text">
-            <h3>
-              Sensor Board
-              <a
-                href="https://github.com/zeynepdndr/device-board"
-                target="_blank"
-              >
-                <span class="fab fa-github" aria-hidden="true"></span>
-              </a>
-            </h3>
-            <div class="tech-stack">
-              <div class="item"><span>React</span></div>
-              <div class="item"><span>Redux Toolkit</span></div>
-              <div class="item"><span>Typescript</span></div>
-              <div class="item"><span>PrimeReact</span></div>
-              <div class="item"><span>Chart.js</span></div>
-            </div>
-            <p class="blackbox">
-              <span class="highlight">
-                A sensor data monitoring web application featuring a dashboard
-                user interface </span
-              ><br />
-              The application displays graphs that track changes in temperature
-              over time. Users can add new sensors or update existing sensor
-              data for real-time monitoring.
-            </p>
-          </div>
-          <img
-            src="img/device-board-2.jpg"
-            alt="Screenshot of the Sensor Board"
-          />
-        </article>
-      </section>
-    </div>
-    <div class="gradient"></div>
+              <div class="timeline-item">
+                <div class="date-column">
+                  <div class="date-range">Mar 2021 – May 2022</div>
+                </div>
+                <div class="content-column">
+                  <div class="content-item">
+                    <a href="https://www.accenture.com/us-en" target="_blank" rel="noopener noreferrer">
+                      <div class="title-container">
+                        <h3 class="item-title">Frontend Engineer, Accenture</h3>
+                        <span class="fas fa-external-link-alt"></span>
+                      </div>
+                    </a>
+                    <p class="item-description"> Built and scaled a B2B platform for the Mercedes-Benz to launch
+                      over 19 countries.
+                      <ul class="projects-list" aria-label="Related links">
+                        <li class="item">
+                          <a href="https://b2bconnect.mercedes-benz.com/tr" target="_blank" rel="noopener noreferrer" aria-label="Mercedes-Benz Website (opens in a new tab)">
+                            <span class="fas fa-link"></span> Mercedes-Benz Website
+                          </a>
+                        </li>
+                      </ul>                      
+                    <ul class="tech-list">
+                      <li class="item"><span>React</span></li>
+                      <li class="item"><span>NextJS</span></li>
+                      <li class="item"><span>Storybook</span></li>
+                      <li class="item"><span>Electron.js</span></li>
+                      <li class="item"><span>Webpack</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
 
-    <div>
-      <section id="about">
-        <h2>About Zeynep Dundar</h2>
-        <div class="">
-          <h4>Just the highlights</h4>
-          <p class="">
-            The early days... <br />
-            I started working as a developer back at 2018 before graduating.
-            <br />
-            <br />
+              <div class="timeline-item">
+                <div class="date-column">
+                  <div class="date-range">Oct 2020 – Jan 2021</div>
+                </div>
+                <div class="content-column">
+                  <div class="content-item">
+                    <a href="https://www.renaultgroup.com/en" target="_blank" rel="noopener noreferrer">
+                      <div class="title-container">
+                        <h3 class="item-title">Full Stack Developer, Renault Group</h3>
+                        <span class="fas fa-external-link-alt"></span>
+                      </div>
+                    </a>
+                    <p class="item-description">Developed a full-stack web app with Java, Spring Boot, and AngularJS
+                      to automate HR processes, streamlining payroll, scheduling, and performance tracking.</p>
+                    <ul class="tech-list">
+                      <li class="item"><span>Java</span></li>
+                      <li class="item"><span>Spring Boot</span></li>
+                      <li class="item"><span>AngularJS</span></li>
+                      <li class="item"><span>PostgreSQL</span></li>
+                      <li class="item"><span>React</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
 
-            Before finding my true passion for Frontend Development, I had the
-            chance to uwork on various projects with different technologies
-            across consulting firms, an automobile company, and banks<br />
-            <br />
-            These included e-commerce web applications using Vanilla JS, jQuery,
-            and Firebase, as well as B2B platforms built with
-            <span class="color-pink">React</span>,
-            <span class="color-pink">NextJS</span>, and
-            <span class="color-pink">Angular.</span><br />
-            <br />
-            I was also fortunate to build a team that allowed me to turn our
-            idea into a mobile app using React Native and leverage
-            <span class="color-pink">AWS</span> (EC2 & S3) for the project.
-          </p>
-          <br />
-          <br />
-          <h4>My Skills</h4>
-          <div class="myskills-icons">
-            <div class="icon-container">
-              <img src="img/technologies/HTML5_logo.png" />
-            </div>
-            <div class="icon-container">
-              <img src="img/technologies/CSS3_logo.png" />
-            </div>
-            <div class="icon-container">
-              <img src="img/technologies/JavaScript_logo.png" />
-            </div>
-            <div class="icon-container">
-              <img src="img/technologies/Typescript_logo.png" />
-            </div>
-            <div class="icon-container">
-              <img src="img/technologies/Angular_full_color_logo.svg.png" />
-            </div>
-            <div class="icon-container">
-              <img src="img/technologies/sass-logo.png" />
-            </div>
-            <div class="icon-container">
-              <img src="img/technologies/react-logo.png" />
-            </div>
-            <div class="icon-container">
-              <img src="img/technologies/image.png" />
-            </div>
-            <div class="icon-container">
-              <img src="img/technologies/redux-logo.png" />
-            </div>
-            <div class="icon-container">
-              <img src="img/technologies/next-logo.png" />
-            </div>
-            <div class="icon-container">
-              <img src="img/technologies/storybook-logo.png" />
-            </div>
-            <div class="icon-container">
-              <img src="img/technologies/figma-logo.png" />
+              <div class="timeline-item">
+                <div class="date-column">
+                  <div class="date-range">July 2019 – Nov 2019</div>
+                </div>
+                <div class="content-column">
+                  <div class="content-item">
+                    <a href="https://softtech.com.tr/en/homepage/" target="_blank" rel="noopener noreferrer">
+                      <div class="title-container">
+                        <h3 class="item-title">Software Development Assistance Specialist, Softtech</h3>
+                        <span class="fas fa-external-link-alt"></span>
+                      </div>
+                    </a>
+                    <p class="item-description">Implemented automated testing procedures using Selenium and Java,
+                      reducing manual testing time and enhancing system reliability.</p>
+                    <ul class="tech-list">
+                      <li class="item"><span>Java</span></li>
+                      <li class="item"><span>Selenium</span></li>
+                      <li class="item"><span>Cucumber</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="date-column">
+                  <div class="date-range">Jul 2018 – Jun 2019</div>
+                </div>
+                <div class="content-column">
+                  <div class="content-item">
+                    <a href="https://www.accenture.com/us-en" target="_blank" rel="noopener noreferrer">
+                      <div class="title-container">
+                        <h3 class="item-title">Software Developer, Webbilir Consulting</h3>
+                        <span class="fas fa-external-link-alt"></span>
+                      </div>
+                    </a>
+                    <p class="item-description"> Built and launched a Single-Page Application
+                      <ul class="projects-list" aria-label="Related links">
+                        <li class="item">
+                          <a href="https://www.jardinerie.com.tr/" target="_blank" rel="noopener noreferrer" aria-label="jardinerie Website (opens in a new tab)">
+                            <span class="fas fa-link"></span> e e-commerce
+                          </a>
+                        </li>
+                      </ul>                      
+                    <ul class="tech-list">
+                      <li class="item"><span>JavaScript</span></li>
+                      <li class="item"><span>Angular2</span></li>
+                      <li class="item"><span>Firebase</span></li>
+                      <li class="item"><span>C# & .NET</span></li>
+                      <li class="item"><span>MSSQL</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
-      </section>
+
+        <!-- Skills Section -->
+        <div class="skills">
+          <h4>My Skills</h4>
+          <div class="myskills-icons">
+            <a class="icon-container" href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank"
+              rel="noopener noreferrer">
+              <span class="icon-wrapper">
+                <img src="img/technologies/html-logo.png" alt="HTML5 Logo">
+              </span>
+              <span class="icon-text">HTML</span>
+            </a>
+
+            <a class="icon-container" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"
+              rel="noopener noreferrer">
+              <span class="icon-wrapper">
+                <img src="img/technologies/css-logo.png" alt="CSS3 Logo">
+              </span>
+              <span class="icon-text">CSS</span>
+            </a>
+
+            <a class="icon-container" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"
+              rel="noopener noreferrer">
+              <span class="icon-wrapper">
+                <img src="img/technologies/javascript-logo.png" alt="JavaScript Logo">
+              </span>
+              <span class="icon-text">JavaScript</span>
+            </a>
+
+            <a class="icon-container" href="https://www.typescriptlang.org/" target="_blank" rel="noopener noreferrer">
+              <span class="icon-wrapper">
+                <img src="img/technologies/typescript-logo.png" alt="TypeScript Logo">
+              </span>
+              <span class="icon-text">TypeScript</span>
+            </a>
+
+            <a class="icon-container" href="https://angular.dev/" target="_blank" rel="noopener noreferrer">
+              <span class="icon-wrapper">
+                <img src="img/technologies/angular-logo.png" alt="Angular Logo">
+              </span>
+              <span class="icon-text">Angular</span>
+            </a>
+
+            <a class="icon-container" href="https://sass-lang.com/" target="_blank" rel="noopener noreferrer">
+              <span class="icon-wrapper">
+                <img src="img/technologies/sass-logo.png" alt="Sass Logo">
+              </span>
+              <span class="icon-text">Sass</span>
+            </a>
+
+            <a class="icon-container" href="https://react.dev/" target="_blank" rel="noopener noreferrer">
+              <span class="icon-wrapper">
+                <img src="img/technologies/react-logo.png" alt="React Logo">
+              </span>
+              <span class="icon-text">React</span>
+            </a>
+
+            <a class="icon-container" href="https://reactnative.dev/" target="_blank" rel="noopener noreferrer">
+              <span class="icon-wrapper">
+                <img src="img/technologies/react-logo.png" alt="React Native Logo">
+              </span>
+              <span class="icon-text">React Native</span>
+            </a>
+
+            <a class="icon-container" href="https://redux.js.org/" target="_blank" rel="noopener noreferrer">
+              <span class="icon-wrapper">
+                <img src="img/technologies/redux-logo.png" alt="Redux Logo">
+              </span>
+              <span class="icon-text">Redux</span>
+            </a>
+
+            <a class="icon-container" href="https://nextjs.org/" target="_blank" rel="noopener noreferrer">
+              <span class="icon-wrapper">
+                <img src="img/technologies/next-logo.png" alt="Next.js Logo">
+              </span>
+              <span class="icon-text">Next.js</span>
+            </a>
+
+            <a class="icon-container" href="https://www.electronjs.org/" target="_blank" rel="noopener noreferrer">
+              <span class="icon-wrapper">
+                <img src="img/technologies/electronjs-logo.png" alt="Electron.js Logo">
+              </span>
+              <span class="icon-text">Electron.js</span>
+            </a>
+
+            <a class="icon-container" href="https://storybook.js.org/" target="_blank" rel="noopener noreferrer">
+              <span class="icon-wrapper">
+                <img src="img/technologies/storybook-logo.png" alt="Storybook Logo">
+              </span>
+              <span class="icon-text">Storybook</span>
+            </a>
+
+            <a class="icon-container" href="https://firebase.google.com/" target="_blank" rel="noopener noreferrer">
+              <span class="icon-wrapper">
+                <img src="img/technologies/firebase-logo.png" alt="Firebase Logo">
+              </span>
+              <span class="icon-text">Firebase</span>
+            </a>
+
+            <a class="icon-container" href="https://www.figma.com/" target="_blank" rel="noopener noreferrer">
+              <span class="icon-wrapper">
+                <img src="img/technologies/figma-logo.png" alt="Figma Logo">
+              </span>
+              <span class="icon-text">Figma</span>
+            </a>
+
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="gradient"></div>
-    <div class="section-black">
-      <section id="contact">
-        <h2>Contact me!</h2>
-        <p>I am always looking forward to hearing you</p>
-        <p class="email-text">
-          <a href="mailto:dundarzey@itu.edu.tr" target="_blank" class="button"
-            >Email me</a
-          >
-        </p>
-      </section>
+  </section>
+  <div class="gradient"></div>
+  <div class="section-black">
+    <section id="contact">
+      <h2>Get In Touch!</h2>
+      <p>I think this is the beginning of a good thing, and I’d love to hear from you.
+
+        Tell me your favorite joke, ask me questions about motorcycles, or help me practice learning Spanish.</p>
+      <p class="email-text">
+        <a href="mailto:dundarzey@itu.edu.tr" target="_blank" class="button">Email me</a>
+      </p>
+    </section>
+  </div>
+  <div class="gradient"></div>
+  <footer class="section-grey">
+    <h2>Zeynep Dundar &middot; Developer</h2>
+    <ul>
+      <li>
+        <a href="https://www.linkedin.com/in/zeynep-dundar/" target="_blank"><span class="fab fa-linkedin"
+            aria-hidden="true"></span><span class="sr-only">LinkedIn</span></a>
+      </li>
+      <li>
+        <a href="https://github.com/zeynepdndr"><span class="fab fa-github-square" aria-hidden="true"></span><span
+            class="sr-only">Github</span></a>
+      </li>
+      <li>
+        <a href="mailto:dundarzey@gmail.com" target="_blank"><span class="fas fa-envelope"
+            aria-hidden="true"></span><span class="sr-only">Mail</span></a>
+      </li>
+    </ul>
+    <div class="page-scroll">
+      <a href="#" id="scrollToTop">
+        <img src="img/rocket.png" alt="Scroll to Top" />
+      </a>
     </div>
-    <div class="gradient"></div>
-    <footer class="section-orange">
-      <h2>Zeynep Dundar &middot; Developer</h2>
-      <ul>
-        <li>
-          <a href="https://www.linkedin.com/in/zeynep-dundar/" target="_blank"
-            ><span class="fab fa-linkedin" aria-hidden="true"></span
-            ><span class="sr-only">LinkedIn</span></a
-          >
-        </li>
-        <li>
-          <a href="https://github.com/zeynepdndr"
-            ><span class="fab fa-github-square" aria-hidden="true"></span
-            ><span class="sr-only">Github</span></a
-          >
-        </li>
-        <li>
-          <a href="mailto:dundarzey@gmail.com" target="_blank"
-            ><span class="fas fa-envelope" aria-hidden="true"></span
-            ><span class="sr-only">Mail</span></a
-          >
-        </li>
-      </ul>
-      <p><small>&copy; 2022 Zeynep Dundar. All rights reserved</small></p>
-    </footer>
-  </body>
+    <p><small>&copy; 2022 Zeynep Dundar. All rights reserved</small></p>
+  </footer>
+</body>
+
 </html>
