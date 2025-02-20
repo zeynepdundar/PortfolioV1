@@ -149,7 +149,7 @@ nav svg:hover {
   color: var(--purple);
 }
 
-nav .button {
+.button {
   background-color: var(--purple);
   text-align: center;
   padding: 0.5rem;
@@ -158,7 +158,7 @@ nav .button {
 
 }
 
-nav .button:hover {
+.button:hover {
   background-color: #8b84d8;
   color: var(--white);
 }
@@ -252,18 +252,20 @@ footer [class*="fa-"]:hover {
   text-align: center;
 }
 
+#contact address {
+  font-style: normal;
+}
+
 #contact a {
   text-decoration: none;
   color: var(--white) !important;
-  box-shadow: inset 0 0 2.5rem var(--purple) !important;
-  border-radius: 2.5em;
   padding: 0.7rem 1rem 0.55rem;
   transition: all 0.5s;
 }
 
 #contact a:hover {
   color: var(--white);
-  background-color: var(--purple);
+  background-color: #8b84d8;
 }
 
 #contact p:last-child {
@@ -300,9 +302,10 @@ footer [class*="fa-"]:hover {
 #projects .fa-github {
   color: var(--white);
   padding: 0.1rem;
+  transition: color 0.3s ease;
 }
 
-#projects svg:hover {
+#projects .fa-github:hover {
   color: var(--purple);
 }
 
