@@ -367,14 +367,15 @@ footer [class*="fa-"]:hover {
 
 #about .myskills-icons img {
   margin: 2rem 0 4rem 0;
-  width: 2rem;
-  height: 2rem;
-  margin: 0.5rem;
+  width: 1.75rem;
+  height: 1.75rem;
+  margin: 0.3rem;
+  padding: 0.1rem;
   transition: background 0.3s ease-in-out;
 }
 
 #about .myskills-icons {
-  padding: 2rem 2rem;
+  padding: 2rem 4rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
