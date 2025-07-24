@@ -117,23 +117,35 @@
     </ul>
   </nav>
   <section id="intro">
-    <p class="name">Hi, I'm <span>Zeynep Dundar,</span></p>
-    <h2>A Frontend Engineer</h2>
-    <p>
-      With extensive experience in building responsive, user-friendly interfaces and solving complex UI challenges. I’m
-      passionate about crafting engaging digital experiences that prioritize usability, performance, and accessibility.
-    </p>
-    <p>
-      I earned a degree in Computer Engineering from Istanbul Technical
-      University and I’ve worked as a Software Engineer at leading companies including Renault Group and Accenture.
-    </p>
-    <p>
-      Currently, I am a Frontend Engineer at Linga rOS. I'm passionate
-      about expanding my hands-on experience and continuously refining my
-      skills in the field.
-      <a href="https://www.linkedin.com/in/zeynep-dundar/" target="_blank">Here is my LinkedIn profile</a>
-    </p>
+    <div class="intro-container">
+      <div class="intro-text">
+        <p class="name">Hi, I'm <span>Zeynep Dundar</span></p>
+        <h2>A Frontend Engineer</h2>
+        <p>
+          With a focus on performance, clean UI, and creative UX. I’m passionate about building engaging digital experiences
+          that prioritize usability and accessibility.
+        </p>
+        <p>
+          I also enjoy creating UI designs with Figma, mostly for mobile apps. You can check out some of my work on
+          Dribbble.
+        </p>
+        <p>
+          I hold a degree in Computer Engineering from Istanbul Technical University. Over the years, I’ve contributed to
+          development projects for companies like Accenture where I worked on the Mercedes-Benz B2B platform as well as
+          Renault Group.
+        </p>
+        <p>
+          Currently, I’m developing the world’s first complete restaurant operating system at Linga rOS, creating a
+          comprehensive technology ecosystem for restaurant businesses.
+          <a href="https://www.linkedin.com/in/zeynep-dundar/" target="_blank">Here is my LinkedIn profile</a>
+        </p>
+      </div>
+      <img src="./img/me/your-photo.png" alt="Zeynep Dundar" class="profile-photo" />
+
+    </div>
   </section>
+  
+  
   <div class="gradient"></div>
   <section id="projects">
     <h2>Projects I am proud of</h2>
@@ -153,21 +165,25 @@
           <li class="item"><span>Docker</span></li>
           <li class="item"><span>Python</span></li>
         </ul>
-        <p class="blackbox">
-          BookSwap is a mobile app for trading used books sustainably. It allows users to scan barcodes, organize
-          their collections, chat in real time, and manage book exchanges effortlessly.
-          <br>
-          Built this in a few months back in 2022, and it has remained a passion project ever since. It's a featured app
-          that people enjoy while contributing to sustainability and connecting with new people.
-        <div class="link">
-          <a href="https://www.figma.com/proto/PiWz3WDV4DYZcEIwoBbv0z/Book-Swap-Mobile-App?node-id=0-1&t=zasbYj42ZQMvwXa8-1"
-            target="_blank">
-            View Figma Design
-          </a>
-          <span class="fas fa-arrow-right"></span>
+        <div class="blackbox">
+          <p>
+            A mobile app for sustainable peer-to-peer book trading. Users can scan barcodes to search from 28M+ titles,
+            add books to their collection, chat in real time, and manage seamless book exchanges, all in one place.
+          </p>
+          <p>
+            Originally built in 2022 as a passion project, this app continues to grow as a community-driven tool that
+            connects people through reading and sharing. My long-term goal is to evolve it into a global platform for
+            exchanging all kinds of items beyond books.
+          </p>
+          <div class="link">
+            <a href="https://www.figma.com/proto/PiWz3WDV4DYZcEIwoBbv0z/Book-Swap-Mobile-App?node-id=0-1&t=zasbYj42ZQMvwXa8-1"
+              target="_blank">
+              View Figma Design
+            </a>
+            <span class="fas fa-arrow-right"></span>
+          </div>
+          <!-- More info and demonstration, coming soon! <br />-->
         </div>
-        <!-- More info and demonstration, coming soon! <br />-->
-        </p>
       </div>
       <img src="img/book-swap.png" alt="Screenshot of the Book Folks" />
     </article>
@@ -185,11 +201,17 @@
           <li class="item"><span>Google Books Api</span></li>
           <li class="item"><span>Webpack</span></li>
         </ul>
-        <p class="blackbox">
-          Shelfie is a SPA for tracking reading progress and building habits. Users can log books, track pages read,
-          view stats, and favorite books for quick access. <br>
-          What started as a way to record books I’d read on sheets turned into this app. Now, I’m adding features like
-          charts to track favorite genres and authors. </p>
+        <div class="blackbox">
+          <p>
+            Your personal reading tracker . It helps you build reading habits and monitor your progress. Log books,
+            track pages read, favorite titles for quick access, and explore detailed stats.
+          </p>
+          <p>
+            What started as a simple way to record books I’d read on sheets grew into this app with more pleasent way.
+            Now, I’m adding features like charts to track your favorite genres and authors.
+          </p>
+
+        </div>
       </div>
       <img src="img/shelfie.png" alt="Screenshot of the Book Folks" />
     </article>
@@ -208,11 +230,15 @@
           <li class="item"><span>NextJS</span></li>
           <li class="item"><span>CSS</span></li>
         </ul>
-        <p class="blackbox">
-          A dynamic app for exploring and learning about Pokémon. It lets users browse a list of Pokémon and view
-          detailed information instantly, built using the RESTful Pokémon API. <br> It was a fun project, I’ve always
-          been super curious about Pokémon, and I built it in just a weekend.
-        </p>
+        <div class="blackbox">
+          <p>
+            A dynamic app for exploring and learning about Pokémon. Users can browse a list of Pokémon and instantly
+            view detailed information, powered by the RESTful Pokémon API.
+          </p>
+          <p> It was a fun project, I’ve always
+            been super curious about Pokémon, and I built it in just a weekend.
+          </p>
+        </div>
       </div>
       <img src="img/pokedex.png" alt="Screenshot of the Pokédex" />
     </article>
@@ -231,15 +257,17 @@
           <li class="item"><span>PrimeReact</span></li>
           <li class="item"><span>Chart.js</span></li>
         </ul>
-        <p class="blackbox">
-          A sensor data monitoring web application featuring a dashboard
-          user interface.
-          The application displays graphs that track changes in temperature
-          over time.
-          <br>
-          This project was built to explore the newly launched Redux Toolkit, applying it to manage real-time data
-          efficiently.
-        </p>
+        <div class="blackbox">
+          <p> A sensor data monitoring web application featuring a dashboard
+            user interface.
+            The application displays graphs that track changes in temperature
+            over time.</p>
+          <p>
+            This project was built to explore the newly launched Redux Toolkit, applying it to manage real-time data
+            efficiently.
+          </p>
+
+        </div>
       </div>
       <img src="img/sensor-board.png" alt="Screenshot of the Sensor Board" />
     </article>
@@ -256,9 +284,14 @@
           <li class="item"><span>CSS</span></li>
           <li class="item"><span>Vercel</span></li>
         </ul>
-        <p class="blackbox">
-          The website that you're looking at currently. This website definitely does not represent my front-end
-          skills.<br> P.S. I’ve always been fascinated by space, so I’ve chosen this theme.
+        <div class="blackbox">
+          <p>
+            The website that you're looking at currently. This website definitely does not represent my front-end
+            skills.
+          </p>
+          <p> P.S. I’ve always been fascinated by space, so I’ve chosen this theme.
+          </p>
+        </div>
       </div>
       <img src="img/portfolio.png" alt="Screenshot of the Pokédex" />
     </article>
