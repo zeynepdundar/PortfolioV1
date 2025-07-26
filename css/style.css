@@ -222,7 +222,7 @@ footer [class*="fa-"]:hover {
 
 .intro-container {
   display: flex;
-  flex-direction: row; /* Fotoğraf sağda, metin solda */
+  flex-direction: row-reverse;
   gap: 2rem;
   align-items: flex-start;
   flex-wrap: wrap;
@@ -230,13 +230,28 @@ footer [class*="fa-"]:hover {
 
 .profile-photo {
   width: 320px;
-  margin: 4rem 0 4rem 0;
   height: auto;
-  border-radius: 50px;
+  border-radius: 50%;
   padding: 1rem;
   object-fit: cover;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  background: #0a1a2a;
+  border: 3px solid #ddd;
+  box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.3); /* Daha hafif glow */
+  animation: floatInSpace 4s ease-in-out infinite;
 }
+
+@keyframes floatInSpace {
+  0%, 100% {
+    transform: translateY(0);
+    box-shadow: 0 0 20px 6px rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px 10px rgba(255, 255, 255, 0.75);
+  }
+}
+
+
 
 .intro-text {
   flex: 1;
@@ -253,18 +268,19 @@ footer [class*="fa-"]:hover {
 }
 
 @media (max-width: 768px) {
-  #intro .intro-content {
+  #intro .intro-container {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
 
-  .profile-photo {
-    display: none;
-  }
-
   .intro-text {
     padding: 0 1rem;
+  }
+
+  .profile-photo {
+    width: 180px;
+    padding: 0.5rem;
   }
 }
 
@@ -862,8 +878,6 @@ footer [class*="fa-"]:hover {
     display: flex;
     flex-direction: column;
   }
-
-
 
   .photo-gallery {
     grid-template-columns: repeat(3, 1fr);
