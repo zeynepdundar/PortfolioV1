@@ -238,6 +238,7 @@ footer [class*="fa-"]:hover {
   border: 3px solid #ddd;
   box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.3); /* Daha hafif glow */
   animation: floatInSpace 4s ease-in-out infinite;
+  
 }
 
 @keyframes floatInSpace {
@@ -281,6 +282,7 @@ footer [class*="fa-"]:hover {
   .profile-photo {
     width: 180px;
     padding: 0.5rem;
+    object-fit: cover;
   }
 }
 
