@@ -107,16 +107,38 @@ img {
 nav {
   font-family: var(--font-primary);
   font-size: 80%;
+  font-weight: 600;
   padding: 1rem;
+  padding-top: 2rem;
 }
 
-nav h1,
-nav h1 a {
+nav h1 {
+  position: relative;
+  text-align: center;
   font-size: 1.25rem;
   font-weight: 600;
-  text-align: center;
-  margin-bottom: -2rem;
 }
+
+nav h1 a {
+  position: relative;
+  z-index: 2;
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  padding-bottom: 0.5rem; /* room for the SVG */
+}
+
+nav h1 svg {
+  position: absolute;
+  bottom: 0; /* attaches to bottom of a tag */
+  left: 50%;
+  transform: translate(-50%, 45%); /* fine-tune vertical positioning */
+  z-index: 1;
+  width: 160px;
+  height: auto;
+  pointer-events: none; 
+}
+
 
 nav [class*="fa-"] {
   font-size: 150%;
@@ -140,7 +162,7 @@ nav ul {
 }
 
 nav li:first-child {
-  flex-basis: 100%;
+  flex-basis: auto;
   text-align: center;
 }
 
@@ -252,22 +274,6 @@ footer [class*="fa-"]:hover {
   }
 }
 
-
-
-.intro-text {
-  flex: 1;
-  min-width: 280px;
-}
-
-.name {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.name span {
-  color: #0073b1;
-}
-
 @media (max-width: 768px) {
   #intro .intro-container {
     flex-direction: column;
@@ -328,6 +334,11 @@ footer [class*="fa-"]:hover {
 #intro a:hover {
   color: var(--purple);
   transition: color 0.3s ease;
+}
+
+#intro .intro-text {
+  flex: 1;
+  min-width: 280px;
 }
 
 #contact {
