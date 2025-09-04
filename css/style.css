@@ -217,6 +217,39 @@ footer [class*="fa-"] {
 
 }
 
+/* Footer icon buttons */
+footer ul {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+}
+
+footer ul a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--white);
+  transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease, transform 0.2s ease;
+}
+
+footer ul a:hover {
+  background: rgba(180, 173, 255, 0.12);
+  border-color: var(--purple);
+  color: var(--purple);
+  transform: translateY(-2px);
+}
+
+footer ul a svg {
+  width: 20px;
+  height: 20px;
+}
+
 footer a:hover,
 footer [class*="fa-"]:hover {
   color: var(--white);
@@ -231,16 +264,19 @@ footer [class*="fa-"]:hover {
 }
 
 .profile-photo {
-  width: 320px;
-  height: auto;
-  border-radius: 50%;
+  border: .6rem solid #c9e4ca;
+  border-radius: 35%;
+  width: 300px;
+  height: 300px;
+  box-sizing: border-box;
+  overflow: hidden;
   padding: 1rem;
   object-fit: cover;
-  background: #0a1a2a;
-  border: 3px solid #ddd;
-  box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.3); /* Daha hafif glow */
-  animation: floatInSpace 4s ease-in-out infinite;
-  
+  -webkit-transition: -webkit-transform .4s ease-in 0s;
+  transition: -webkit-transform .4s ease-in 0s;
+  -o-transition: transform .4s ease-in 0s;
+  transition: transform .4s ease-in 0s;
+  transition: transform .4s ease-in 0s, -webkit-transform .4s ease-in 0s;
 }
 
 @keyframes floatInSpace {
@@ -271,8 +307,8 @@ footer [class*="fa-"]:hover {
   }
 
   .profile-photo {
-    width: 180px;
-    padding: 0.5rem;
+    width: 300px;
+    height: 300px;
     object-fit: cover;
   }
 }
@@ -292,7 +328,7 @@ footer [class*="fa-"]:hover {
 
 .intro-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   align-items: center;
   gap: 4rem;
   flex-wrap: wrap;
@@ -300,17 +336,19 @@ footer [class*="fa-"]:hover {
 
 /* Profile Image */
 .profile-photo {
-  width: 250px;
-  height: 250px;
+  border: .2rem solid #c9e4ca;
+  border-radius: 35%;
+  width: 300px;
+  height: 400px;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: .5rem;
   object-fit: cover;
-  border-radius: 50%;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.profile-photo:hover {
-  transform: scale(1.05);
-  box-shadow: 0 15px 25px rgba(0,0,0,0.3);
+  -webkit-transition: -webkit-transform .4s ease-in 0s;
+  transition: -webkit-transform .4s ease-in 0s;
+  -o-transition: transform .4s ease-in 0s;
+  transition: transform .4s ease-in 0s;
+  transition: transform .4s ease-in 0s, -webkit-transform .4s ease-in 0s;
 }
 
 /* Intro Text */
@@ -408,6 +446,24 @@ footer [class*="fa-"]:hover {
 #about h3,
 #about h4 {
   color: var(--white);
+}
+
+/* Projects: GitHub icon inherits title color; no circle */
+#projects h3 a {
+  display: inline-flex;
+  align-items: center;
+  color: var(--white);
+  line-height: 1;
+  margin-left: 6px;
+}
+
+#projects h3 a:hover {
+  color: var(--purple);
+}
+
+#projects h3 a svg {
+  width: 22px;
+  height: 22px;
 }
 
 #projects h4 {
@@ -671,7 +727,7 @@ footer [class*="fa-"]:hover {
 .timeline-item::before {
   content: "";
   position: absolute;
-  top: 22px;
+  top: 27px;
   left: calc(150px + 0.5rem - 6px);
   width: 12px;
   height: 12px;
@@ -692,8 +748,6 @@ footer [class*="fa-"]:hover {
 .date-range {
   display: inline-block;
   padding: 0.15rem 0.5rem;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.06);
 }
 
 .date-column {
@@ -701,6 +755,7 @@ footer [class*="fa-"]:hover {
   font-weight: 500;
   color: #555;
   padding: .3rem 0;
+  padding-top: 8px;
 }
 
 .content-column {
@@ -729,6 +784,11 @@ footer [class*="fa-"]:hover {
   font-size: 0.75rem;
   text-transform: uppercase;
   position: relative;
+}
+
+.date-range .date-now {
+  color: var(--purple);
+  font-weight: 300;
 }
 
 /* Typography normalization for timeline */
@@ -1001,6 +1061,7 @@ footer [class*="fa-"]:hover {
     text-align: left;
     font-weight: bold;
     font-size: 14px;
+    padding-top: 0;
   }
 
   .content-column {
