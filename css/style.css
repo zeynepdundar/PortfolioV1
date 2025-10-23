@@ -13,6 +13,7 @@
     Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     font-primary-serif;
   --font-accent: "Courgette", cursive, font-primary-serif;
+  --font-garet: "Garet", sans-serif;
 }
 
 /* Box Model Setup */
@@ -40,16 +41,14 @@ html {
 .gradient {
   height: 2px;
   opacity: 0.7;
-  background: linear-gradient(
-    90deg,
-    var(--purple) 2%,
-    var(--blue) 16%,
-    #a1ffff 32%,
-    var(--purple) 49%,
-    var(--blue) 66%,
-    #a1ffff 82%,
-    var(--purple) 98%
-  );
+  background: linear-gradient(90deg,
+      var(--purple) 2%,
+      var(--blue) 16%,
+      #a1ffff 32%,
+      var(--purple) 49%,
+      var(--blue) 66%,
+      #a1ffff 82%,
+      var(--purple) 98%);
 }
 
 /* Global Styles */
@@ -99,17 +98,36 @@ nav {
   backdrop-filter: blur(5px);
 }
 
-nav h1,
-nav h1 a {
+nav .logo {
+  position: relative;
+  /* needed for absolute positioning of SVG */
+  display: inline-block;
+  /* shrink to content */
   font-size: 1.25rem;
   font-weight: 600;
-  text-align: center;
-  display: flex;
-  align-items: center;
 }
 
-nav h1 .svg-path {
+nav .logo a {
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+  position: relative;
+  z-index: 2;
+}
+
+nav .logo .svg-path {
   display: none;
+  position: absolute;
+  bottom: -2rem;
+  width: 160px;
+  height: auto;
+  pointer-events: none;
 }
 
 nav [class*="fa-"] {
@@ -249,22 +267,41 @@ footer ul a svg {
 
 .intro-container {
   display: flex;
-  flex-direction: row-reverse;
   align-items: center;
+  justify-content: center;
+  flex-direction: row-reverse;
   gap: 4rem;
   flex-wrap: wrap;
 }
 
-.profile-photo {
-  border: none;
-  border-radius: 35%;
-  width: 300px;
-  height: 400px;
-  box-sizing: border-box;
+.profile-photo-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6rem;
   overflow: hidden;
-  padding: 0;
-  object-fit: cover;
-  box-shadow: 0 0 20px rgba(140, 121, 250, 0.2);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  z-index: 0;
+}
+
+.profile-photo-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.95) 0%,       
+      rgba(0, 0, 0, 0.8) 25%,       
+      rgba(10, 15, 25, 0.7) 55%,    
+      rgba(0, 0, 0, 0.5) 75%,      
+      rgba(0, 0, 0, 0.35) 100%     
+    ); */
+  z-index: 10;
+  pointer-events: none;
 }
 
 .intro-text {
@@ -390,65 +427,96 @@ footer ul a svg {
 }
 
 #projects article {
-  min-height: 450px; /* Smallest mobile height */
+  min-height: 450px;
 }
+
 @media (min-width: 640px) {
   #projects article {
     min-height: 550px;
-  } /* sm:h-[550px] */
+  }
 }
+
 @media (min-width: 768px) {
   #projects article {
     min-height: 600px;
-  } /* md:h-[600px] */
+  }
 }
+
 @media (min-width: 1024px) {
   #projects article {
     min-height: 500px;
-  } /* lg:h-[500px] */
-}
-
-/* 2. Project Image Positioning (Screenshot) */
-#projects img {
-  position: absolute;
-  bottom: -0.5rem; /* -bottom-2 */
-  right: 0;
-  width: 80%; /* w-[80%] - larger on mobile */
-  max-width: 100%;
-  height: auto;
-  object-fit: contain; /* Ensures the mock-up is fully visible */
-  border: none; /* No border for the mock-up look */
-  border-radius: 0;
-  box-shadow: none;
-  transition: none; /* No image transition */
-}
-
-@media (min-width: 640px) {
-  #projects img {
-    width: 75%;
   }
 }
-@media (min-width: 768px) {
-  #projects img {
-    width: 60%;
-  }
-}
-@media (min-width: 1024px) {
-  #projects img {
-    width: 55%;
-  } /* lg:max-w-[55%] */
-}
-#projects .header-row {
+
+#projects .header {
   margin-bottom: 1rem;
   padding: 2.5rem 2.5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
-#projects .header-row h3 {
+
+.link-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  color: #000;
+}
+
+.link-icon svg {
+  width: 25px;
+  height: 25px;
+}
+
+.link-icon:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+}
+
+#projects .header-top {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+#projects .header h3 {
   font-size: 2rem;
   font-weight: 700;
   margin: 0;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0;
 }
-#projects .header-row .tech-list {
+
+#projects article.reverse .header-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#projects .header .icons {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+#projects .header .icon-link {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+#projects .header .icon-link:hover {
+  color: #007bff;
+}
+
+#projects .header .tech-list {
   margin-top: 2rem;
   display: flex;
   flex-wrap: wrap;
@@ -458,23 +526,59 @@ footer ul a svg {
   padding: 0;
 }
 
+#projects article.reverse .header .tech-list {
+  margin-left: auto;
+  justify-content: flex-end;
+}
+
+#projects ul .item {
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+}
+
+#projects .project-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+@media (min-width: 640px) {
+  #projects img {
+    width: 75%;
+  }
+}
+
+@media (min-width: 768px) {
+  #projects img {
+    width: 60%;
+  }
+}
+
+@media (min-width: 1024px) {
+  #projects img {
+    width: 55%;
+  }
+}
+
 #projects .text {
-  width: 90%; /* max-w-[90%] */
+  width: 90%;
+  /* max-w-[90%] */
 
   z-index: 10;
-  text-align: left; /* Ensure text is left-aligned */
-
+  text-align: left;
   padding: 0.25rem 2.5rem;
 }
 
 @media (min-width: 1024px) {
   #projects .text {
-    /* lg:ml-4 mt-10 */
-    max-width: 45%; /* Constrain text width on large screens */
+    max-width: 45%;
   }
 }
-
-/* Content Elements Styling */
 
 @media (min-width: 768px) {
   #projects h3 {
@@ -492,15 +596,13 @@ footer ul a svg {
 }
 
 #projects .blackbox p {
-  /* Project Description */
-  color: var(--grey); /* Text color for description */
+  color: var(--grey);
   font-weight: 500;
   line-height: 1.5;
   margin-bottom: 0;
   font-size: 1rem;
 }
 
-/* 4. Project Links (GitHub/Demo) */
 #projects .link-bar {
   position: absolute;
   top: 0;
@@ -518,7 +620,6 @@ footer ul a svg {
   }
 }
 
-/* Links themselves (GitHub/Demo) */
 #projects .link-bar a {
   display: inline-flex;
   align-items: center;
@@ -530,7 +631,7 @@ footer ul a svg {
   color: var(--black);
   padding: 0;
   transition: transform 0.2s ease;
-  z-index: 20; /* Keep above image */
+  z-index: 20;
 }
 
 #projects .link-bar a:hover {
@@ -547,29 +648,6 @@ footer ul a svg {
 }
 
 /* 5. Tech Stack Styling */
-#projects ul {
-  list-style: none;
-  padding: 0;
-  margin-top: 2rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  border-top: none; /* Removed dashed border */
-  font-family: var(--font-primary);
-}
-
-#projects ul .item {
-  /* Mimics the uppercase heading style for the tech stack */
-  border: none;
-  background: none;
-  color: var(--white);
-  font-size: 1rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  padding: 0;
-  line-height: 1.2;
-  letter-spacing: 0.1em;
-}
 
 /* The .link container is no longer needed but its inner link styling is used for consistency */
 #projects .link a {
@@ -578,6 +656,7 @@ footer ul a svg {
   text-decoration: none;
   transition: color 0.3s ease;
 }
+
 #projects .link:hover a {
   color: var(--purple);
 }
@@ -587,22 +666,23 @@ footer ul a svg {
 #projects .reverse {
   order: initial;
 }
+
 #projects article:last-child {
   margin-bottom: 4rem;
 }
+
 #projects .fa-github {
   display: none;
-} /* Hide old GitHub icons */
+}
+
 #projects h4 {
   display: none;
-} /* Hide old side project label */
+}
+
 #projects .link {
   display: none;
-} /* Hide old demo links */
+}
 
-/* Rest of the CSS remains the same as the elegant version */
-
-/* --- ABOUT SECTION STYLES (Unchanged) --- */
 #about .tech-list {
   list-style-type: none;
   padding: 0;
@@ -660,7 +740,7 @@ footer ul a svg {
   display: inline-block;
 }
 
-.projects-list > a {
+.projects-list>a {
   display: inline-flex;
   align-items: center;
   font-size: 18px;
@@ -715,7 +795,6 @@ footer ul a svg {
   display: inline-block;
   padding: 0 1rem;
 }
-
 
 .content-column {
   display: flex;
@@ -1016,6 +1095,7 @@ footer ul a svg {
 }
 
 @media (min-width: 800px) {
+
   #projects,
   #about {
     max-width: 1200px;
@@ -1076,27 +1156,71 @@ footer ul a svg {
 }
 
 @media (min-width: 768px) {
-  #projects .header-row h3 {
+  #projects .header h3 {
     font-size: 2.4rem;
   }
 }
 
 /* GitHub icon styling */
-#projects .header-row h3 a {
+#projects .header h3 a {
   color: var(--white);
   font-size: 1.4rem;
   transition: color 0.2s ease;
 }
 
-#projects .header-row h3 a:hover {
+#projects .header h3 a:hover {
   color: var(--purple);
 }
 
-/* Individual tech items */
-#projects .header-row .tech-list .item span {
-  color: var(--white);
-  font-size: 1rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+/* Ensure project content is flex row */
+#projects article .project-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: relative;
+  gap: 2rem;
+}
+
+/* Text block */
+#projects article .text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Default layout: text left, image right */
+#projects article:not(.reverse) .text {
+  order: 1;
+  padding-right: 2rem;
+}
+
+#projects article:not(.reverse) img {
+  order: 2;
+}
+
+/* Reverse layout: text right, image left */
+#projects article.reverse .text {
+  order: 2;
+  padding-left: 2rem;
+  text-align: left;
+}
+
+#projects article.reverse img {
+  order: 1;
+}
+
+/* Responsive: stack vertically on small screens */
+@media (max-width: 900px) {
+  #projects article .project-content {
+    flex-direction: column;
+  }
+
+  #projects article .text,
+  #projects article img {
+    width: 100%;
+    padding: 0;
+    order: 0;
+  }
 }

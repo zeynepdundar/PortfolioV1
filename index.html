@@ -57,6 +57,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&family=Courgette&display=swap"
     rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/garet" rel="stylesheet">
+
 
 
   <!-- External Font Awesome Script -->
@@ -90,8 +92,8 @@
   </script>
   <nav>
     <ul>
-      <li>
-        <h1>
+      <li class="nav-logo">
+        <h1 class="logo">
           <a href="index.html">Zeynep Dundar</a>
           <svg class="svg-path" width="180" height="65" viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
             <path d="M556 127.295C526.5 106.295 425.5 98.2955 266.665 119.358C146.037 135.353 49 130.295 7 114.295"
@@ -133,8 +135,26 @@
   </nav>
   <section id="intro">
     <div class="intro-container">
-      <img src="./img/me/your-photo.png" alt="Zeynep Dundar" class="profile-photo" />
+      <!-- <div class="profile-photo-wrapper">
+        <div class="fuji-ovals">
+          <div class="fuji-oval" style="transform: translateY(0%);">
+            <img src="img/me/your-photo.png" class="fuji-oval__image" alt="">
+          </div>
+          <div class="fuji-oval" style="transform: translateY(20%);">
+            <img src="img/me/IMG_9361.jpg" class="fuji-oval__image" alt="">
+          </div>
+          <div class="fuji-oval" style="transform: translateY(25%);">
+            <img src="img/me/IMG_5230.jpg" class="fuji-oval__image" alt="">
+          </div>
+          <div class="fuji-oval" style="transform: translateY(0%);">
+            <img src="img/me/IMG_6482.jpg" class="fuji-oval__image" alt="Zeynep Dundar">
+          </div>
+        </div>
+      </div> -->
 
+      <div class="profile-photo-wrapper">
+        <img src="./img/me/your-photo.png" alt="Zeynep Dundar">
+      </div>
       <div class="intro-text">
         <p class="name">Hi, I'm
           <span>Zeynep Dündar,</span>
@@ -164,14 +184,37 @@
   <div class="gradient"></div>
   <section id="projects">
     <h2>Projects I am proud of</h2>
-    <article>
-      <div class="header-row">
-        <h3>
-          Fast-Paced Horse Racing
-          <a href="https://github.com/zeynepdndr/HorseRacingGame" target="_blank" aria-label="View on GitHub">
-            <span class="fab fa-github" aria-hidden="true"></span>
-          </a>
-        </h3>
+    <article class="reverse">
+      <div class="header">
+        <div class="header-top">
+          <div class="icons">
+            <a href="https://github.com/zeynepdndr/HorseRacingGame" target="_blank" aria-label="View on GitHub" class="link-icon">
+              <svg fill="#000000" viewBox="0 -0.5 25 25" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="m12.301 0h.093c2.242 0 4.34.613 6.137 1.68l-.055-.031c1.871 1.094 3.386 2.609 4.449 4.422l.031.058c1.04 1.769 1.654 3.896 1.654 6.166 0 5.406-3.483 10-8.327 11.658l-.087.026c-.063.02-.135.031-.209.031-.162 0-.312-.054-.433-.144l.002.001c-.128-.115-.208-.281-.208-.466 0-.005 0-.01 0-.014v.001q0-.048.008-1.226t.008-2.154c.007-.075.011-.161.011-.249 0-.792-.323-1.508-.844-2.025.618-.061 1.176-.163 1.718-.305l-.076.017c.573-.16 1.073-.373 1.537-.642l-.031.017c.508-.28.938-.636 1.292-1.058l.006-.007c.372-.476.663-1.036.84-1.645l.009-.035c.209-.683.329-1.468.329-2.281 0-.045 0-.091-.001-.136v.007c0-.022.001-.047.001-.072 0-1.248-.482-2.383-1.269-3.23l.003.003c.168-.44.265-.948.265-1.479 0-.649-.145-1.263-.404-1.814l.011.026c-.115-.022-.246-.035-.381-.035-.334 0-.649.078-.929.216l.012-.005c-.568.21-1.054.448-1.512.726l.038-.022-.609.384c-.922-.264-1.981-.416-3.075-.416s-2.153.152-3.157.436l.081-.02q-.256-.176-.681-.433c-.373-.214-.814-.421-1.272-.595l-.066-.022c-.293-.154-.64-.244-1.009-.244-.124 0-.246.01-.364.03l.013-.002c-.248.524-.393 1.139-.393 1.788 0 .531.097 1.04.275 1.509l-.01-.029c-.785.844-1.266 1.979-1.266 3.227 0 .025 0 .051.001.076v-.004c-.001.039-.001.084-.001.13 0 .809.12 1.591.344 2.327l-.015-.057c.189.643.476 1.202.85 1.693l-.009-.013c.354.435.782.793 1.267 1.062l.022.011c.432.252.933.465 1.46.614l.046.011c.466.125 1.024.227 1.595.284l.046.004c-.431.428-.718 1-.784 1.638l-.001.012c-.207.101-.448.183-.699.236l-.021.004c-.256.051-.549.08-.85.08-.022 0-.044 0-.066 0h.003c-.394-.008-.756-.136-1.055-.348l.006.004c-.371-.259-.671-.595-.881-.986l-.007-.015c-.198-.336-.459-.614-.768-.827l-.009-.006c-.225-.169-.49-.301-.776-.38l-.016-.004-.32-.048c-.023-.002-.05-.003-.077-.003-.14 0-.273.028-.394.077l.007-.003q-.128.072-.08.184c.039.086.087.16.145.225l-.001-.001c.061.072.13.135.205.19l.003.002.112.08c.283.148.516.354.693.603l.004.006c.191.237.359.505.494.792l.01.024.16.368c.135.402.38.738.7.981l.005.004c.3.234.662.402 1.057.478l.016.002c.33.064.714.104 1.106.112h.007c.045.002.097.002.15.002.261 0 .517-.021.767-.062l-.027.004.368-.064q0 .609.008 1.418t.008.873v.014c0 .185-.08.351-.208.466h-.001c-.119.089-.268.143-.431.143-.075 0-.147-.011-.214-.032l.005.001c-4.929-1.689-8.409-6.283-8.409-11.69 0-2.268.612-4.393 1.681-6.219l-.032.058c1.094-1.871 2.609-3.386 4.422-4.449l.058-.031c1.739-1.034 3.835-1.645 6.073-1.645h.098-.005zm-7.64 17.666q.048-.112-.112-.192-.16-.048-.208.032-.048.112.112.192.144.096.208-.032zm.497.545q.112-.08-.032-.256-.16-.144-.256-.048-.112.08.032.256.159.157.256.047zm.48.72q.144-.112 0-.304-.128-.208-.272-.096-.144.08 0 .288t.272.112zm.672.673q.128-.128-.064-.304-.192-.192-.32-.048-.144.128.064.304.192.192.32.044zm.913.4q.048-.176-.208-.256-.24-.064-.304.112t.208.24q.24.097.304-.096zm1.009.08q0-.208-.272-.176-.256 0-.256.176 0 .208.272.176.256.001.256-.175zm.929-.16q-.032-.176-.288-.144-.256.048-.224.24t.288.128.225-.224z">
+                  </path>
+                </g>
+              </svg>
+            </a>
+            <a href="https://horse-racing-game-steel.vercel.app/" target="_blank" aria-label="View on GitHub" class="link-icon">
+              <svg viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M15.197 3.35462C16.8703 1.67483 19.4476 1.53865 20.9536 3.05046C22.4596 4.56228 22.3239 7.14956 20.6506 8.82935L18.2268 11.2626M10.0464 14C8.54044 12.4882 8.67609 9.90087 10.3494 8.22108L12.5 6.06212"
+                    stroke="#1C274C" stroke-width="2.4" stroke-linecap="round"></path>
+                  <path
+                    d="M13.9536 10C15.4596 11.5118 15.3239 14.0991 13.6506 15.7789L11.2268 18.2121L8.80299 20.6454C7.12969 22.3252 4.55237 22.4613 3.0464 20.9495C1.54043 19.4377 1.67609 16.8504 3.34939 15.1706L5.77323 12.7373"
+                    stroke="#1C274C" stroke-width="2.4" stroke-linecap="round"></path>
+                </g>
+              </svg> </a>
+          </div>
+          <h3>Fast-Paced Horse Racing</h3>
+        </div>
         <ul class="tech-list">
           <li class="item"><span>Vuejs</span></li>
           <li class="item"><span>Vite</span></li>
@@ -179,34 +222,62 @@
           <li class="item"><span>Robot</span></li>
         </ul>
       </div>
-      <div class="text">
-        <div class="blackbox">
-          <p>
-            An interactive Vue.js app that simulates horse racing with 20 uniquely colored horses. Players can generate
-            a 6-round schedule, start races, watch animated horse movements, and view results round by round. </p>
+      <div class="project-content">
+        <div class="text">
+          <div class="blackbox">
+            <p>
+              An interactive Vue.js app that simulates horse racing with 20 uniquely colored horses. Players can
+              generate
+              a 6-round schedule, start races, watch animated horse movements, and view results round by round. </p>
 
-          <p>Built with Vuex for state management and a scalable, component-based architecture. </p>
-          <div class="link">
-            <a href="https://horse-racing-game-steel.vercel.app/" target="_blank">
-              Try the Game
-            </a>
-            <span class="fas fa-arrow-right"></span>
+            <p>Built with Vuex for state management and a scalable, component-based architecture. </p>
+            <div class="link">
+              <a href="https://horse-racing-game-steel.vercel.app/" target="_blank">
+                Try the Game
+              </a>
+              <span class="fas fa-arrow-right"></span>
+            </div>
           </div>
-          <!-- You can also comment out extra demo links here if needed -->
         </div>
+        <img src="img/horse-race.png" alt="Screenshot of Fast-Paced Horse Racing" />
       </div>
-      <img src="img/horse-race.png" alt="Screenshot of Fast-Paced Horse Racing" />
+
     </article>
 
     <article>
-      <div class="header-row">
+      <div class="header">
+        <div class="header-top">
+          <div class="icons">
+            <a href="https://gitlab.com/harmony-org/book-swap/-/tree/dev?ref_type=heads" target="_blank" aria-label="View on GitHub" class="link-icon">
+              <svg fill="#000000" viewBox="0 -0.5 25 25" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="m12.301 0h.093c2.242 0 4.34.613 6.137 1.68l-.055-.031c1.871 1.094 3.386 2.609 4.449 4.422l.031.058c1.04 1.769 1.654 3.896 1.654 6.166 0 5.406-3.483 10-8.327 11.658l-.087.026c-.063.02-.135.031-.209.031-.162 0-.312-.054-.433-.144l.002.001c-.128-.115-.208-.281-.208-.466 0-.005 0-.01 0-.014v.001q0-.048.008-1.226t.008-2.154c.007-.075.011-.161.011-.249 0-.792-.323-1.508-.844-2.025.618-.061 1.176-.163 1.718-.305l-.076.017c.573-.16 1.073-.373 1.537-.642l-.031.017c.508-.28.938-.636 1.292-1.058l.006-.007c.372-.476.663-1.036.84-1.645l.009-.035c.209-.683.329-1.468.329-2.281 0-.045 0-.091-.001-.136v.007c0-.022.001-.047.001-.072 0-1.248-.482-2.383-1.269-3.23l.003.003c.168-.44.265-.948.265-1.479 0-.649-.145-1.263-.404-1.814l.011.026c-.115-.022-.246-.035-.381-.035-.334 0-.649.078-.929.216l.012-.005c-.568.21-1.054.448-1.512.726l.038-.022-.609.384c-.922-.264-1.981-.416-3.075-.416s-2.153.152-3.157.436l.081-.02q-.256-.176-.681-.433c-.373-.214-.814-.421-1.272-.595l-.066-.022c-.293-.154-.64-.244-1.009-.244-.124 0-.246.01-.364.03l.013-.002c-.248.524-.393 1.139-.393 1.788 0 .531.097 1.04.275 1.509l-.01-.029c-.785.844-1.266 1.979-1.266 3.227 0 .025 0 .051.001.076v-.004c-.001.039-.001.084-.001.13 0 .809.12 1.591.344 2.327l-.015-.057c.189.643.476 1.202.85 1.693l-.009-.013c.354.435.782.793 1.267 1.062l.022.011c.432.252.933.465 1.46.614l.046.011c.466.125 1.024.227 1.595.284l.046.004c-.431.428-.718 1-.784 1.638l-.001.012c-.207.101-.448.183-.699.236l-.021.004c-.256.051-.549.08-.85.08-.022 0-.044 0-.066 0h.003c-.394-.008-.756-.136-1.055-.348l.006.004c-.371-.259-.671-.595-.881-.986l-.007-.015c-.198-.336-.459-.614-.768-.827l-.009-.006c-.225-.169-.49-.301-.776-.38l-.016-.004-.32-.048c-.023-.002-.05-.003-.077-.003-.14 0-.273.028-.394.077l.007-.003q-.128.072-.08.184c.039.086.087.16.145.225l-.001-.001c.061.072.13.135.205.19l.003.002.112.08c.283.148.516.354.693.603l.004.006c.191.237.359.505.494.792l.01.024.16.368c.135.402.38.738.7.981l.005.004c.3.234.662.402 1.057.478l.016.002c.33.064.714.104 1.106.112h.007c.045.002.097.002.15.002.261 0 .517-.021.767-.062l-.027.004.368-.064q0 .609.008 1.418t.008.873v.014c0 .185-.08.351-.208.466h-.001c-.119.089-.268.143-.431.143-.075 0-.147-.011-.214-.032l.005.001c-4.929-1.689-8.409-6.283-8.409-11.69 0-2.268.612-4.393 1.681-6.219l-.032.058c1.094-1.871 2.609-3.386 4.422-4.449l.058-.031c1.739-1.034 3.835-1.645 6.073-1.645h.098-.005zm-7.64 17.666q.048-.112-.112-.192-.16-.048-.208.032-.048.112.112.192.144.096.208-.032zm.497.545q.112-.08-.032-.256-.16-.144-.256-.048-.112.08.032.256.159.157.256.047zm.48.72q.144-.112 0-.304-.128-.208-.272-.096-.144.08 0 .288t.272.112zm.672.673q.128-.128-.064-.304-.192-.192-.32-.048-.144.128.064.304.192.192.32.044zm.913.4q.048-.176-.208-.256-.24-.064-.304.112t.208.24q.24.097.304-.096zm1.009.08q0-.208-.272-.176-.256 0-.256.176 0 .208.272.176.256.001.256-.175zm.929-.16q-.032-.176-.288-.144-.256.048-.224.24t.288.128.225-.224z">
+                  </path>
+                </g>
+              </svg>
+            </a>
+            <a href="https://vimeo.com/1037563566?share=copy" target="_blank" aria-label="View on GitHub" class="link-icon">
+              <svg viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M15.197 3.35462C16.8703 1.67483 19.4476 1.53865 20.9536 3.05046C22.4596 4.56228 22.3239 7.14956 20.6506 8.82935L18.2268 11.2626M10.0464 14C8.54044 12.4882 8.67609 9.90087 10.3494 8.22108L12.5 6.06212"
+                    stroke="#1C274C" stroke-width="2.4" stroke-linecap="round"></path>
+                  <path
+                    d="M13.9536 10C15.4596 11.5118 15.3239 14.0991 13.6506 15.7789L11.2268 18.2121L8.80299 20.6454C7.12969 22.3252 4.55237 22.4613 3.0464 20.9495C1.54043 19.4377 1.67609 16.8504 3.34939 15.1706L5.77323 12.7373"
+                    stroke="#1C274C" stroke-width="2.4" stroke-linecap="round"></path>
+                </g>
+              </svg> </a>
+          </div>
+          <h3>
+            Book Trading Platform
+          </h3>
+        </div>
 
-        <h3>
-          Book Trading Platform
-          <a href="https://gitlab.com/harmony-org/book-swap/-/tree/main?ref_type=heads" target="_blank">
-            <span class="fab fa-github" aria-hidden="true"></span>
-          </a>
-        </h3>
         <ul class="tech-list">
           <li class="item"><span>React Native</span></li>
           <li class="item"><span>Expo</span></li>
@@ -215,45 +286,71 @@
           <li class="item"><span>Python</span></li>
         </ul>
       </div>
-      <div class="text">
+      <div class="project-content">
+        <div class="text">
 
 
-        <div class="blackbox">
-          <p>
-            A mobile app for sustainable peer-to-peer book trading. Users can scan barcodes to search from 28M+ titles,
-            add books to their collection, chat in real time, and manage seamless book exchanges, all in one place.
-          </p>
-          <p>
-            Originally built in 2022 as a passion project, this app continues to grow as a community-driven tool that
-            connects people through reading and sharing. My long-term goal is to evolve it into a global platform for
-            exchanging all kinds of items beyond books.
-          </p>
-          <div class="link design-link">
-            <a href="https://www.figma.com/proto/PiWz3WDV4DYZcEIwoBbv0z/Book-Swap-Mobile-App?node-id=0-1&t=zasbYj42ZQMvwXa8-1"
-              target="_blank">
-              View Design
-            </a>
-            <span class="fas fa-arrow-right"></span>
+          <div class="blackbox">
+            <p>
+              A mobile app for sustainable peer-to-peer book trading. Users can scan barcodes to search from 28M+
+              titles,
+              add books to their collection, chat in real time, and manage seamless book exchanges, all in one place.
+            </p>
+            <p>
+              Originally built in 2022 as a passion project, this app continues to grow as a community-driven tool that
+              connects people through reading and sharing. My long-term goal is to evolve it into a global platform for
+              exchanging all kinds of items beyond books.
+            </p>
+            <div class="link design-link">
+              <a href="https://www.figma.com/proto/PiWz3WDV4DYZcEIwoBbv0z/Book-Swap-Mobile-App?node-id=0-1&t=zasbYj42ZQMvwXa8-1"
+                target="_blank">
+                View Design
+              </a>
+              <span class="fas fa-arrow-right"></span>
+            </div>
+            <div class="link">
+              <a href="https://vimeo.com/1037563566?share=copy" target="_blank">
+                Watch Demo
+              </a>
+              <span class="fas fa-arrow-right"></span>
+            </div>
+            <!-- More info and demonstration, coming soon! <br />-->
           </div>
-          <div class="link">
-            <a href="https://vimeo.com/1037563566?share=copy" target="_blank">
-              Watch Demo
-            </a>
-            <span class="fas fa-arrow-right"></span>
-          </div>
-          <!-- More info and demonstration, coming soon! <br />-->
         </div>
+        <img src="img/book-swap.png" alt="Screenshot of the Book Folks" />
       </div>
-      <img src="img/book-swap.png" alt="Screenshot of the Book Folks" />
     </article>
-    <article>
-      <div class="header-row">
-        <h3>
-          Shelfie
-          <a href="https://github.com/zeynepdndr/book-folk" target="_blank">
-            <span class="fab fa-github" aria-hidden="true"></span>
-          </a>
-        </h3>
+    <article class="reverse">
+      <div class="header">
+        <div class="header-top">
+          <div class="icons">
+            <a href="https://github.com/zeynepdndr/shelfie" target="_blank" aria-label="View on GitHub" class="link-icon">
+              <svg fill="#000000" viewBox="0 -0.5 25 25" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="m12.301 0h.093c2.242 0 4.34.613 6.137 1.68l-.055-.031c1.871 1.094 3.386 2.609 4.449 4.422l.031.058c1.04 1.769 1.654 3.896 1.654 6.166 0 5.406-3.483 10-8.327 11.658l-.087.026c-.063.02-.135.031-.209.031-.162 0-.312-.054-.433-.144l.002.001c-.128-.115-.208-.281-.208-.466 0-.005 0-.01 0-.014v.001q0-.048.008-1.226t.008-2.154c.007-.075.011-.161.011-.249 0-.792-.323-1.508-.844-2.025.618-.061 1.176-.163 1.718-.305l-.076.017c.573-.16 1.073-.373 1.537-.642l-.031.017c.508-.28.938-.636 1.292-1.058l.006-.007c.372-.476.663-1.036.84-1.645l.009-.035c.209-.683.329-1.468.329-2.281 0-.045 0-.091-.001-.136v.007c0-.022.001-.047.001-.072 0-1.248-.482-2.383-1.269-3.23l.003.003c.168-.44.265-.948.265-1.479 0-.649-.145-1.263-.404-1.814l.011.026c-.115-.022-.246-.035-.381-.035-.334 0-.649.078-.929.216l.012-.005c-.568.21-1.054.448-1.512.726l.038-.022-.609.384c-.922-.264-1.981-.416-3.075-.416s-2.153.152-3.157.436l.081-.02q-.256-.176-.681-.433c-.373-.214-.814-.421-1.272-.595l-.066-.022c-.293-.154-.64-.244-1.009-.244-.124 0-.246.01-.364.03l.013-.002c-.248.524-.393 1.139-.393 1.788 0 .531.097 1.04.275 1.509l-.01-.029c-.785.844-1.266 1.979-1.266 3.227 0 .025 0 .051.001.076v-.004c-.001.039-.001.084-.001.13 0 .809.12 1.591.344 2.327l-.015-.057c.189.643.476 1.202.85 1.693l-.009-.013c.354.435.782.793 1.267 1.062l.022.011c.432.252.933.465 1.46.614l.046.011c.466.125 1.024.227 1.595.284l.046.004c-.431.428-.718 1-.784 1.638l-.001.012c-.207.101-.448.183-.699.236l-.021.004c-.256.051-.549.08-.85.08-.022 0-.044 0-.066 0h.003c-.394-.008-.756-.136-1.055-.348l.006.004c-.371-.259-.671-.595-.881-.986l-.007-.015c-.198-.336-.459-.614-.768-.827l-.009-.006c-.225-.169-.49-.301-.776-.38l-.016-.004-.32-.048c-.023-.002-.05-.003-.077-.003-.14 0-.273.028-.394.077l.007-.003q-.128.072-.08.184c.039.086.087.16.145.225l-.001-.001c.061.072.13.135.205.19l.003.002.112.08c.283.148.516.354.693.603l.004.006c.191.237.359.505.494.792l.01.024.16.368c.135.402.38.738.7.981l.005.004c.3.234.662.402 1.057.478l.016.002c.33.064.714.104 1.106.112h.007c.045.002.097.002.15.002.261 0 .517-.021.767-.062l-.027.004.368-.064q0 .609.008 1.418t.008.873v.014c0 .185-.08.351-.208.466h-.001c-.119.089-.268.143-.431.143-.075 0-.147-.011-.214-.032l.005.001c-4.929-1.689-8.409-6.283-8.409-11.69 0-2.268.612-4.393 1.681-6.219l-.032.058c1.094-1.871 2.609-3.386 4.422-4.449l.058-.031c1.739-1.034 3.835-1.645 6.073-1.645h.098-.005zm-7.64 17.666q.048-.112-.112-.192-.16-.048-.208.032-.048.112.112.192.144.096.208-.032zm.497.545q.112-.08-.032-.256-.16-.144-.256-.048-.112.08.032.256.159.157.256.047zm.48.72q.144-.112 0-.304-.128-.208-.272-.096-.144.08 0 .288t.272.112zm.672.673q.128-.128-.064-.304-.192-.192-.32-.048-.144.128.064.304.192.192.32.044zm.913.4q.048-.176-.208-.256-.24-.064-.304.112t.208.24q.24.097.304-.096zm1.009.08q0-.208-.272-.176-.256 0-.256.176 0 .208.272.176.256.001.256-.175zm.929-.16q-.032-.176-.288-.144-.256.048-.224.24t.288.128.225-.224z">
+                  </path>
+                </g>
+              </svg>
+            </a>
+            <a href="https://github.com/zeynepdndr/shelfie" target="_blank" aria-label="View on GitHub" class="link-icon">
+              <svg viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M15.197 3.35462C16.8703 1.67483 19.4476 1.53865 20.9536 3.05046C22.4596 4.56228 22.3239 7.14956 20.6506 8.82935L18.2268 11.2626M10.0464 14C8.54044 12.4882 8.67609 9.90087 10.3494 8.22108L12.5 6.06212"
+                    stroke="#1C274C" stroke-width="2.4" stroke-linecap="round"></path>
+                  <path
+                    d="M13.9536 10C15.4596 11.5118 15.3239 14.0991 13.6506 15.7789L11.2268 18.2121L8.80299 20.6454C7.12969 22.3252 4.55237 22.4613 3.0464 20.9495C1.54043 19.4377 1.67609 16.8504 3.34939 15.1706L5.77323 12.7373"
+                    stroke="#1C274C" stroke-width="2.4" stroke-linecap="round"></path>
+                </g>
+              </svg> </a>
+          </div>
+          <h3>Shelfie</h3>
+        </div>
         <ul class="tech-list">
           <li class="item"><span>Firebase</span></li>
           <li class="item"><span>React</span></li>
@@ -261,30 +358,56 @@
           <li class="item"><span>Webpack</span></li>
         </ul>
       </div>
-      <div class="text">
+      <div class="project-content">
 
-        <div class="blackbox">
-          <p>
-            Your personal reading tracker . It helps you build reading habits and monitor your progress. Log books,
-            track pages read, favorite titles for quick access, and explore detailed stats.
-          </p>
-          <p>
-            What started as a simple way to record books I’d read on sheets grew into this app with more pleasent way.
-            Now, I’m adding features like charts to track your favorite genres and authors.
-          </p>
+        <div class="text">
 
+          <div class="blackbox">
+            <p>
+              Your personal reading tracker . It helps you build reading habits and monitor your progress. Log books,
+              track pages read, favorite titles for quick access, and explore detailed stats.
+            </p>
+            <p>
+              What started as a simple way to record books I’d read on sheets grew into this app with more pleasent way.
+              Now, I’m adding features like charts to track your favorite genres and authors.
+            </p>
+
+          </div>
         </div>
+        <img src="img/shelfie-ss.png" alt="Screenshot of the Book Folks" />
       </div>
-      <img src="img/shelfie-ss.png" alt="Screenshot of the Book Folks" />
     </article>
-    <article class="reverse">
-      <div class="header-row">
-        <h3>
-          Pokédex
-          <a href="https://github.com/zeynepdndr/pokedex" target="_blank">
-            <span class="fab fa-github" aria-hidden="true"></span>
-          </a>
-        </h3>
+    <article>
+      <div class="header">
+        <div class="header-top">
+          <div class="icons">
+            <a href="https://github.com/zeynepdndr/pokedex" target="_blank" aria-label="View on GitHub" class="link-icon">
+              <svg fill="#000000" viewBox="0 -0.5 25 25" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="m12.301 0h.093c2.242 0 4.34.613 6.137 1.68l-.055-.031c1.871 1.094 3.386 2.609 4.449 4.422l.031.058c1.04 1.769 1.654 3.896 1.654 6.166 0 5.406-3.483 10-8.327 11.658l-.087.026c-.063.02-.135.031-.209.031-.162 0-.312-.054-.433-.144l.002.001c-.128-.115-.208-.281-.208-.466 0-.005 0-.01 0-.014v.001q0-.048.008-1.226t.008-2.154c.007-.075.011-.161.011-.249 0-.792-.323-1.508-.844-2.025.618-.061 1.176-.163 1.718-.305l-.076.017c.573-.16 1.073-.373 1.537-.642l-.031.017c.508-.28.938-.636 1.292-1.058l.006-.007c.372-.476.663-1.036.84-1.645l.009-.035c.209-.683.329-1.468.329-2.281 0-.045 0-.091-.001-.136v.007c0-.022.001-.047.001-.072 0-1.248-.482-2.383-1.269-3.23l.003.003c.168-.44.265-.948.265-1.479 0-.649-.145-1.263-.404-1.814l.011.026c-.115-.022-.246-.035-.381-.035-.334 0-.649.078-.929.216l.012-.005c-.568.21-1.054.448-1.512.726l.038-.022-.609.384c-.922-.264-1.981-.416-3.075-.416s-2.153.152-3.157.436l.081-.02q-.256-.176-.681-.433c-.373-.214-.814-.421-1.272-.595l-.066-.022c-.293-.154-.64-.244-1.009-.244-.124 0-.246.01-.364.03l.013-.002c-.248.524-.393 1.139-.393 1.788 0 .531.097 1.04.275 1.509l-.01-.029c-.785.844-1.266 1.979-1.266 3.227 0 .025 0 .051.001.076v-.004c-.001.039-.001.084-.001.13 0 .809.12 1.591.344 2.327l-.015-.057c.189.643.476 1.202.85 1.693l-.009-.013c.354.435.782.793 1.267 1.062l.022.011c.432.252.933.465 1.46.614l.046.011c.466.125 1.024.227 1.595.284l.046.004c-.431.428-.718 1-.784 1.638l-.001.012c-.207.101-.448.183-.699.236l-.021.004c-.256.051-.549.08-.85.08-.022 0-.044 0-.066 0h.003c-.394-.008-.756-.136-1.055-.348l.006.004c-.371-.259-.671-.595-.881-.986l-.007-.015c-.198-.336-.459-.614-.768-.827l-.009-.006c-.225-.169-.49-.301-.776-.38l-.016-.004-.32-.048c-.023-.002-.05-.003-.077-.003-.14 0-.273.028-.394.077l.007-.003q-.128.072-.08.184c.039.086.087.16.145.225l-.001-.001c.061.072.13.135.205.19l.003.002.112.08c.283.148.516.354.693.603l.004.006c.191.237.359.505.494.792l.01.024.16.368c.135.402.38.738.7.981l.005.004c.3.234.662.402 1.057.478l.016.002c.33.064.714.104 1.106.112h.007c.045.002.097.002.15.002.261 0 .517-.021.767-.062l-.027.004.368-.064q0 .609.008 1.418t.008.873v.014c0 .185-.08.351-.208.466h-.001c-.119.089-.268.143-.431.143-.075 0-.147-.011-.214-.032l.005.001c-4.929-1.689-8.409-6.283-8.409-11.69 0-2.268.612-4.393 1.681-6.219l-.032.058c1.094-1.871 2.609-3.386 4.422-4.449l.058-.031c1.739-1.034 3.835-1.645 6.073-1.645h.098-.005zm-7.64 17.666q.048-.112-.112-.192-.16-.048-.208.032-.048.112.112.192.144.096.208-.032zm.497.545q.112-.08-.032-.256-.16-.144-.256-.048-.112.08.032.256.159.157.256.047zm.48.72q.144-.112 0-.304-.128-.208-.272-.096-.144.08 0 .288t.272.112zm.672.673q.128-.128-.064-.304-.192-.192-.32-.048-.144.128.064.304.192.192.32.044zm.913.4q.048-.176-.208-.256-.24-.064-.304.112t.208.24q.24.097.304-.096zm1.009.08q0-.208-.272-.176-.256 0-.256.176 0 .208.272.176.256.001.256-.175zm.929-.16q-.032-.176-.288-.144-.256.048-.224.24t.288.128.225-.224z">
+                  </path>
+                </g>
+              </svg>
+            </a>
+            <a href="https://github.com/yourusername" target="_blank" aria-label="View on GitHub" class="link-icon">
+              <svg viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M15.197 3.35462C16.8703 1.67483 19.4476 1.53865 20.9536 3.05046C22.4596 4.56228 22.3239 7.14956 20.6506 8.82935L18.2268 11.2626M10.0464 14C8.54044 12.4882 8.67609 9.90087 10.3494 8.22108L12.5 6.06212"
+                    stroke="#1C274C" stroke-width="2.4" stroke-linecap="round"></path>
+                  <path
+                    d="M13.9536 10C15.4596 11.5118 15.3239 14.0991 13.6506 15.7789L11.2268 18.2121L8.80299 20.6454C7.12969 22.3252 4.55237 22.4613 3.0464 20.9495C1.54043 19.4377 1.67609 16.8504 3.34939 15.1706L5.77323 12.7373"
+                    stroke="#1C274C" stroke-width="2.4" stroke-linecap="round"></path>
+                </g>
+              </svg> </a>
+          </div>
+          <h3>Pokédex</h3>
+        </div>
         <ul class="tech-list">
           <li class="item"><span>Typescript</span></li>
           <li class="item"><span>GraphQL</span></li>
@@ -293,28 +416,54 @@
           <li class="item"><span>CSS</span></li>
         </ul>
       </div>
-      <div class="text">
+      <div class="project-content">
 
-        <div class="blackbox">
-          <p>
-            A dynamic app for exploring and learning about Pokémon. Users can browse a list of Pokémon and instantly
-            view detailed information, powered by the RESTful Pokémon API.
-          </p>
-          <p> It was a fun project, I’ve always
-            been super curious about Pokémon, and I built it in just a weekend.
-          </p>
+        <div class="text">
+
+          <div class="blackbox">
+            <p>
+              A dynamic app for exploring and learning about Pokémon. Users can browse a list of Pokémon and instantly
+              view detailed information, powered by the RESTful Pokémon API.
+            </p>
+            <p> It was a fun project, I’ve always
+              been super curious about Pokémon, and I built it in just a weekend.
+            </p>
+          </div>
         </div>
+        <img src="img/pokedex.png" alt="Screenshot of the Pokédex" />
       </div>
-      <img src="img/pokedex.png" alt="Screenshot of the Pokédex" />
     </article>
-    <article>
-      <div class="header-row">
-        <h3>
-          Sensor Board
-          <a href="https://github.com/zeynepdndr/device-board" target="_blank">
-            <span class="fab fa-github" aria-hidden="true"></span>
-          </a>
-        </h3>
+    <article class="reverse">
+      <div class="header">
+        <div class="header-top">
+          <div class="icons">
+            <a href="https://github.com/yourusername" target="_blank" aria-label="View on GitHub" class="link-icon">
+              <svg fill="#000000" viewBox="0 -0.5 25 25" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="m12.301 0h.093c2.242 0 4.34.613 6.137 1.68l-.055-.031c1.871 1.094 3.386 2.609 4.449 4.422l.031.058c1.04 1.769 1.654 3.896 1.654 6.166 0 5.406-3.483 10-8.327 11.658l-.087.026c-.063.02-.135.031-.209.031-.162 0-.312-.054-.433-.144l.002.001c-.128-.115-.208-.281-.208-.466 0-.005 0-.01 0-.014v.001q0-.048.008-1.226t.008-2.154c.007-.075.011-.161.011-.249 0-.792-.323-1.508-.844-2.025.618-.061 1.176-.163 1.718-.305l-.076.017c.573-.16 1.073-.373 1.537-.642l-.031.017c.508-.28.938-.636 1.292-1.058l.006-.007c.372-.476.663-1.036.84-1.645l.009-.035c.209-.683.329-1.468.329-2.281 0-.045 0-.091-.001-.136v.007c0-.022.001-.047.001-.072 0-1.248-.482-2.383-1.269-3.23l.003.003c.168-.44.265-.948.265-1.479 0-.649-.145-1.263-.404-1.814l.011.026c-.115-.022-.246-.035-.381-.035-.334 0-.649.078-.929.216l.012-.005c-.568.21-1.054.448-1.512.726l.038-.022-.609.384c-.922-.264-1.981-.416-3.075-.416s-2.153.152-3.157.436l.081-.02q-.256-.176-.681-.433c-.373-.214-.814-.421-1.272-.595l-.066-.022c-.293-.154-.64-.244-1.009-.244-.124 0-.246.01-.364.03l.013-.002c-.248.524-.393 1.139-.393 1.788 0 .531.097 1.04.275 1.509l-.01-.029c-.785.844-1.266 1.979-1.266 3.227 0 .025 0 .051.001.076v-.004c-.001.039-.001.084-.001.13 0 .809.12 1.591.344 2.327l-.015-.057c.189.643.476 1.202.85 1.693l-.009-.013c.354.435.782.793 1.267 1.062l.022.011c.432.252.933.465 1.46.614l.046.011c.466.125 1.024.227 1.595.284l.046.004c-.431.428-.718 1-.784 1.638l-.001.012c-.207.101-.448.183-.699.236l-.021.004c-.256.051-.549.08-.85.08-.022 0-.044 0-.066 0h.003c-.394-.008-.756-.136-1.055-.348l.006.004c-.371-.259-.671-.595-.881-.986l-.007-.015c-.198-.336-.459-.614-.768-.827l-.009-.006c-.225-.169-.49-.301-.776-.38l-.016-.004-.32-.048c-.023-.002-.05-.003-.077-.003-.14 0-.273.028-.394.077l.007-.003q-.128.072-.08.184c.039.086.087.16.145.225l-.001-.001c.061.072.13.135.205.19l.003.002.112.08c.283.148.516.354.693.603l.004.006c.191.237.359.505.494.792l.01.024.16.368c.135.402.38.738.7.981l.005.004c.3.234.662.402 1.057.478l.016.002c.33.064.714.104 1.106.112h.007c.045.002.097.002.15.002.261 0 .517-.021.767-.062l-.027.004.368-.064q0 .609.008 1.418t.008.873v.014c0 .185-.08.351-.208.466h-.001c-.119.089-.268.143-.431.143-.075 0-.147-.011-.214-.032l.005.001c-4.929-1.689-8.409-6.283-8.409-11.69 0-2.268.612-4.393 1.681-6.219l-.032.058c1.094-1.871 2.609-3.386 4.422-4.449l.058-.031c1.739-1.034 3.835-1.645 6.073-1.645h.098-.005zm-7.64 17.666q.048-.112-.112-.192-.16-.048-.208.032-.048.112.112.192.144.096.208-.032zm.497.545q.112-.08-.032-.256-.16-.144-.256-.048-.112.08.032.256.159.157.256.047zm.48.72q.144-.112 0-.304-.128-.208-.272-.096-.144.08 0 .288t.272.112zm.672.673q.128-.128-.064-.304-.192-.192-.32-.048-.144.128.064.304.192.192.32.044zm.913.4q.048-.176-.208-.256-.24-.064-.304.112t.208.24q.24.097.304-.096zm1.009.08q0-.208-.272-.176-.256 0-.256.176 0 .208.272.176.256.001.256-.175zm.929-.16q-.032-.176-.288-.144-.256.048-.224.24t.288.128.225-.224z">
+                  </path>
+                </g>
+              </svg>
+            </a>
+            <a href="https://github.com/yourusername" target="_blank" aria-label="View on GitHub" class="link-icon">
+              <svg viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M15.197 3.35462C16.8703 1.67483 19.4476 1.53865 20.9536 3.05046C22.4596 4.56228 22.3239 7.14956 20.6506 8.82935L18.2268 11.2626M10.0464 14C8.54044 12.4882 8.67609 9.90087 10.3494 8.22108L12.5 6.06212"
+                    stroke="#1C274C" stroke-width="2.4" stroke-linecap="round"></path>
+                  <path
+                    d="M13.9536 10C15.4596 11.5118 15.3239 14.0991 13.6506 15.7789L11.2268 18.2121L8.80299 20.6454C7.12969 22.3252 4.55237 22.4613 3.0464 20.9495C1.54043 19.4377 1.67609 16.8504 3.34939 15.1706L5.77323 12.7373"
+                    stroke="#1C274C" stroke-width="2.4" stroke-linecap="round"></path>
+                </g>
+              </svg> </a>
+          </div>
+          <h3>Sensor Board</h3>
+        </div>
         <ul class="tech-list">
           <li class="item"><span>React</span></li>
           <li class="item"><span>Redux Toolkit</span></li>
@@ -323,48 +472,76 @@
           <li class="item"><span>Chart.js</span></li>
         </ul>
       </div>
-      <div class="text">
+      <div class="project-content">
+        <div class="text">
 
-        <div class="blackbox">
-          <p> A sensor data monitoring web application featuring a dashboard
-            user interface.
-            The application displays graphs that track changes in temperature
-            over time.</p>
-          <p>
-            This project was built to explore the newly launched Redux Toolkit, applying it to manage real-time data
-            efficiently.
-          </p>
+          <div class="blackbox">
+            <p> A sensor data monitoring web application featuring a dashboard
+              user interface.
+              The application displays graphs that track changes in temperature
+              over time.</p>
+            <p>
+              This project was built to explore the newly launched Redux Toolkit, applying it to manage real-time data
+              efficiently.
+            </p>
 
+          </div>
         </div>
+        <img src="img/sensor-board.png" alt="Screenshot of the Sensor Board" />
       </div>
-      <img src="img/sensor-board.png" alt="Screenshot of the Sensor Board" />
     </article>
-    <article class="reverse">
-      <div class="header-row">
-        <h3>
-          Portfolio
-          <a href="https://github.com/zeynepdndr/portfolio" target="_blank">
-            <span class="fab fa-github" aria-hidden="true"></span>
-          </a>
-        </h3>
+    <article>
+      <div class="header">
+        <div class="header-top">
+          <div class="icons">
+            <a href="https://github.com/zeynepdndr/Portfolio" target="_blank" aria-label="View on GitHub" class="link-icon">
+              <svg fill="#000000" viewBox="0 -0.5 25 25" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="m12.301 0h.093c2.242 0 4.34.613 6.137 1.68l-.055-.031c1.871 1.094 3.386 2.609 4.449 4.422l.031.058c1.04 1.769 1.654 3.896 1.654 6.166 0 5.406-3.483 10-8.327 11.658l-.087.026c-.063.02-.135.031-.209.031-.162 0-.312-.054-.433-.144l.002.001c-.128-.115-.208-.281-.208-.466 0-.005 0-.01 0-.014v.001q0-.048.008-1.226t.008-2.154c.007-.075.011-.161.011-.249 0-.792-.323-1.508-.844-2.025.618-.061 1.176-.163 1.718-.305l-.076.017c.573-.16 1.073-.373 1.537-.642l-.031.017c.508-.28.938-.636 1.292-1.058l.006-.007c.372-.476.663-1.036.84-1.645l.009-.035c.209-.683.329-1.468.329-2.281 0-.045 0-.091-.001-.136v.007c0-.022.001-.047.001-.072 0-1.248-.482-2.383-1.269-3.23l.003.003c.168-.44.265-.948.265-1.479 0-.649-.145-1.263-.404-1.814l.011.026c-.115-.022-.246-.035-.381-.035-.334 0-.649.078-.929.216l.012-.005c-.568.21-1.054.448-1.512.726l.038-.022-.609.384c-.922-.264-1.981-.416-3.075-.416s-2.153.152-3.157.436l.081-.02q-.256-.176-.681-.433c-.373-.214-.814-.421-1.272-.595l-.066-.022c-.293-.154-.64-.244-1.009-.244-.124 0-.246.01-.364.03l.013-.002c-.248.524-.393 1.139-.393 1.788 0 .531.097 1.04.275 1.509l-.01-.029c-.785.844-1.266 1.979-1.266 3.227 0 .025 0 .051.001.076v-.004c-.001.039-.001.084-.001.13 0 .809.12 1.591.344 2.327l-.015-.057c.189.643.476 1.202.85 1.693l-.009-.013c.354.435.782.793 1.267 1.062l.022.011c.432.252.933.465 1.46.614l.046.011c.466.125 1.024.227 1.595.284l.046.004c-.431.428-.718 1-.784 1.638l-.001.012c-.207.101-.448.183-.699.236l-.021.004c-.256.051-.549.08-.85.08-.022 0-.044 0-.066 0h.003c-.394-.008-.756-.136-1.055-.348l.006.004c-.371-.259-.671-.595-.881-.986l-.007-.015c-.198-.336-.459-.614-.768-.827l-.009-.006c-.225-.169-.49-.301-.776-.38l-.016-.004-.32-.048c-.023-.002-.05-.003-.077-.003-.14 0-.273.028-.394.077l.007-.003q-.128.072-.08.184c.039.086.087.16.145.225l-.001-.001c.061.072.13.135.205.19l.003.002.112.08c.283.148.516.354.693.603l.004.006c.191.237.359.505.494.792l.01.024.16.368c.135.402.38.738.7.981l.005.004c.3.234.662.402 1.057.478l.016.002c.33.064.714.104 1.106.112h.007c.045.002.097.002.15.002.261 0 .517-.021.767-.062l-.027.004.368-.064q0 .609.008 1.418t.008.873v.014c0 .185-.08.351-.208.466h-.001c-.119.089-.268.143-.431.143-.075 0-.147-.011-.214-.032l.005.001c-4.929-1.689-8.409-6.283-8.409-11.69 0-2.268.612-4.393 1.681-6.219l-.032.058c1.094-1.871 2.609-3.386 4.422-4.449l.058-.031c1.739-1.034 3.835-1.645 6.073-1.645h.098-.005zm-7.64 17.666q.048-.112-.112-.192-.16-.048-.208.032-.048.112.112.192.144.096.208-.032zm.497.545q.112-.08-.032-.256-.16-.144-.256-.048-.112.08.032.256.159.157.256.047zm.48.72q.144-.112 0-.304-.128-.208-.272-.096-.144.08 0 .288t.272.112zm.672.673q.128-.128-.064-.304-.192-.192-.32-.048-.144.128.064.304.192.192.32.044zm.913.4q.048-.176-.208-.256-.24-.064-.304.112t.208.24q.24.097.304-.096zm1.009.08q0-.208-.272-.176-.256 0-.256.176 0 .208.272.176.256.001.256-.175zm.929-.16q-.032-.176-.288-.144-.256.048-.224.24t.288.128.225-.224z">
+                  </path>
+                </g>
+              </svg>
+            </a>
+            <a href="www.zeynepdundar.me/" target="_blank" aria-label="View on GitHub" class="link-icon">
+              <svg viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M15.197 3.35462C16.8703 1.67483 19.4476 1.53865 20.9536 3.05046C22.4596 4.56228 22.3239 7.14956 20.6506 8.82935L18.2268 11.2626M10.0464 14C8.54044 12.4882 8.67609 9.90087 10.3494 8.22108L12.5 6.06212"
+                    stroke="#1C274C" stroke-width="2.4" stroke-linecap="round"></path>
+                  <path
+                    d="M13.9536 10C15.4596 11.5118 15.3239 14.0991 13.6506 15.7789L11.2268 18.2121L8.80299 20.6454C7.12969 22.3252 4.55237 22.4613 3.0464 20.9495C1.54043 19.4377 1.67609 16.8504 3.34939 15.1706L5.77323 12.7373"
+                    stroke="#1C274C" stroke-width="2.4" stroke-linecap="round"></path>
+                </g>
+              </svg> </a>
+          </div>
+          <h3>Portfolio</h3>
+        </div>
         <ul class="tech-list">
           <li class="item"><span>HTML</span></li>
           <li class="item"><span>CSS</span></li>
           <li class="item"><span>Vercel</span></li>
         </ul>
       </div>
-      <div class="text">
+      <div class="project-content">
 
-        <div class="blackbox">
-          <p>
-            The website that you're looking at currently. This website definitely does not represent my front-end
-            skills.
-          </p>
-          <p> P.S. I’ve always been fascinated by space, so I’ve chosen this theme.
-          </p>
+        <div class="text">
+
+          <div class="blackbox">
+            <p>
+              The website that you're looking at currently. This website definitely does not represent my front-end
+              skills.
+            </p>
+            <p> P.S. I’ve always been fascinated by space, so I’ve chosen this theme.
+            </p>
+          </div>
         </div>
+        <img src="img/portfolio.png" alt="Screenshot of the Pokédex" />
       </div>
-      <img src="img/portfolio.png" alt="Screenshot of the Pokédex" />
     </article>
   </section>
   <div class="gradient"></div>
