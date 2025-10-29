@@ -1,11 +1,14 @@
 /* Variables Declaration - Colors, Font Stacks, and Sizes */
 :root {
-  --black: #0d1117;
+  --black: #0f0f0f;
   --dark: #050505;
-  --grey: #b5b5b5;
+  --grey: #bcbcbc;
   --blue: #4e9ffc;
-  --dark-grey-blue: #161b22;
-  --purple: #8c79fa;
+  --dark-grey: #161b22;
+  --dark-grey:#1f1f1f;
+  --purple: #a78bfa;;
+  --lila: #a78bfa;
+  --x: #c4b5fd;
   --white: #e6edf3;
   --font-size: 1.3rem;
 
@@ -35,20 +38,22 @@ html {
 }
 
 .section-grey {
-  background-color: var(--dark-grey-blue);
+  background-color: var(--dark-grey);
 }
 
 .gradient {
   height: 2px;
   opacity: 0.7;
-  background: linear-gradient(90deg,
-      var(--purple) 2%,
-      var(--blue) 16%,
-      #a1ffff 32%,
-      var(--purple) 49%,
-      var(--blue) 66%,
-      #a1ffff 82%,
-      var(--purple) 98%);
+  background: linear-gradient(
+    90deg,
+    var(--purple) 2%,
+    var(--blue) 16%,
+    #a1ffff 32%,
+    var(--purple) 49%,
+    var(--blue) 66%,
+    #a1ffff 82%,
+    var(--purple) 98%
+  );
 }
 
 /* Global Styles */
@@ -57,7 +62,7 @@ body {
   margin: 0;
   font-family: var(--font-primary);
   background: var(--black);
-  color: var(--white);
+  color: var(--grey);
   font-size: var(--font-size);
   font-weight: 400;
   line-height: 1.6;
@@ -91,7 +96,7 @@ nav {
   font-family: var(--font-primary);
   font-size: 80%;
   padding: 1rem;
-  background-color: rgba(13, 17, 23, 0.8);
+  background-color: rgba(15, 15, 15, 0.8);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -100,9 +105,7 @@ nav {
 
 nav .logo {
   position: relative;
-  /* needed for absolute positioning of SVG */
   display: inline-block;
-  /* shrink to content */
   font-size: 1.25rem;
   font-weight: 600;
 }
@@ -110,12 +113,10 @@ nav .logo {
 nav .logo a {
   font-size: 1.25rem;
   font-weight: 600;
-  text-decoration: none;
   color: inherit;
   display: flex;
   align-items: center;
   display: inline-block;
-  color: inherit;
   text-decoration: none;
   position: relative;
   z-index: 2;
@@ -157,7 +158,7 @@ nav li:first-child {
 }
 
 nav a {
-  color: var(--white);
+  color: var(--grey);
   text-decoration: none;
   display: block;
   transition: color 0.3s ease, text-shadow 0.3s ease;
@@ -170,20 +171,20 @@ nav svg:hover {
 }
 
 .button {
-  background-color: transparent;
-  color: var(--purple);
+  background-color: var(--purple);
+  color: #fff;
   border: 1px solid var(--purple);
   text-align: center;
   font-weight: 600;
   padding: 0.5rem 1rem;
   border-radius: 10px;
   transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+
 }
 
 .button:hover {
-  background-color: var(--purple);
-  color: var(--black);
-  transform: translateY(-2px);
+  background-color: var(--lila);
+  color: #fff;
 }
 
 @media (min-width: 850px) {
@@ -282,7 +283,7 @@ footer ul a svg {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 6rem;
+  border-radius: 4rem;
   overflow: hidden;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
   z-index: 0;
@@ -292,14 +293,12 @@ footer ul a svg {
   content: "";
   position: absolute;
   inset: 0;
-  /* background: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.95) 0%,       
-      rgba(0, 0, 0, 0.8) 25%,       
-      rgba(10, 15, 25, 0.7) 55%,    
-      rgba(0, 0, 0, 0.5) 75%,      
-      rgba(0, 0, 0, 0.35) 100%     
-    ); */
+  background: linear-gradient(
+    to top,
+    rgba(20, 20, 20, 0.55) 0%,   /* alt kısmı biraz daha şeffaf */
+    rgba(40, 40, 40, 0.35) 50%,  /* orta tonları açtık */
+    rgba(60, 60, 60, 0.15) 100%  /* üstte oldukça açık */
+  );  
   z-index: 10;
   pointer-events: none;
 }
@@ -336,17 +335,17 @@ footer ul a svg {
   font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 1rem;
-  color: var(--white);
+  color: var(--grey);
 }
 
 #intro a {
-  color: var(--purple);
+  color: var(--lila);
   text-decoration: underline;
   transition: color 0.3s ease;
 }
 
 #intro a:hover {
-  color: var(--blue);
+  color: var(--x);
 }
 
 #contact {
@@ -422,7 +421,7 @@ footer ul a svg {
   position: relative;
   overflow: hidden;
   border-radius: 1.5rem;
-  background-color: var(--dark-grey-blue);
+  background-color: var(--dark-grey);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
 }
 
@@ -502,7 +501,7 @@ footer ul a svg {
 
 #projects .header .icons {
   display: flex;
-  gap: 8px;
+  gap: 15px;
   align-items: center;
 }
 
@@ -671,10 +670,6 @@ footer ul a svg {
   margin-bottom: 4rem;
 }
 
-#projects .fa-github {
-  display: none;
-}
-
 #projects h4 {
   display: none;
 }
@@ -713,22 +708,32 @@ footer ul a svg {
 }
 
 #about .tech-list .item {
-  box-shadow: none;
-  outline: 1px solid var(--blue);
-  color: var(--cyan);
+
   display: inline-block;
   min-width: fit-content;
   max-width: 100%;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  padding: 0.25em 0.75em;
-  border-radius: 1.5em;
+
   text-align: center;
   font-size: 0.75rem;
   line-height: 1.25rem;
   font-weight: 400;
 }
+
+#about .tech-list .item span {
+  background-color: #14532d;
+  color: #4ade80;
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-radius: 0.75rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+}
+
 
 .projects-list {
   list-style: none;
@@ -740,7 +745,7 @@ footer ul a svg {
   display: inline-block;
 }
 
-.projects-list>a {
+.projects-list > a {
   display: inline-flex;
   align-items: center;
   font-size: 18px;
@@ -806,14 +811,6 @@ footer ul a svg {
   align-items: center;
   gap: 8px;
   transition: color 0.3s ease;
-}
-
-.title-container:hover {
-  color: var(--purple);
-}
-
-.title-container:hover .item-title {
-  color: var(--purple);
 }
 
 .date-range {
@@ -1095,7 +1092,6 @@ footer ul a svg {
 }
 
 @media (min-width: 800px) {
-
   #projects,
   #about {
     max-width: 1200px;
