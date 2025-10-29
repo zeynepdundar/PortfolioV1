@@ -533,8 +533,7 @@
 
           <div class="blackbox">
             <p>
-              The website that you're looking at currently. This website definitely does not represent my front-end
-              skills.
+              The website that you're looking at currently. Built as a fun thematic site; I’d love to show you other examples of my design‑fronted work.
             </p>
             <p> P.S. I’ve always been fascinated by space, so I’ve chosen this theme.
             </p>
@@ -902,8 +901,11 @@
         <img src="img/rocket.png" alt="Scroll to Top" />
       </a>
     </div>
-    <p><small>&copy; 2022 Zeynep Dundar. All rights reserved</small></p>
+    <p><small>&copy; <span id="year"></span> Zeynep Dundar. All rights reserved</small></p>
   </footer>
 </body>
-
 </html>
+<script>
+  const yearSpan = document.getElementById('year');
+  yearSpan.textContent = new Date().getFullYear(); // will show 2025
+</script>
